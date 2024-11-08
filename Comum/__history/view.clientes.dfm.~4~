@@ -1,0 +1,61 @@
+inherited ViewClientes: TViewClientes
+  Caption = 'Clientes'
+  Color = clWhite
+  TextHeight = 15
+  inherited pnlTopo: TPanel
+    Color = clWhite
+    inherited pnlTitulo: TPanel
+      Width = 625
+      Color = 5263440
+      Font.Color = clWhite
+      ParentBackground = False
+      ParentFont = False
+      ExplicitWidth = 625
+      inherited lblTitulo: TLabel
+        Width = 612
+        Caption = 'Clientes'
+        Color = 5263440
+        ParentColor = False
+        ExplicitWidth = 607
+        ExplicitHeight = 35
+      end
+    end
+  end
+  inherited pnlBottom: TPanel
+    Top = 768
+    Height = 45
+    Color = clWhite
+    ExplicitTop = 768
+    ExplicitHeight = 45
+    inherited pnlBtnSalvar: TPanel
+      Left = 1000
+      Width = 113
+      Height = 39
+      ExplicitLeft = 1000
+      ExplicitWidth = 113
+      ExplicitHeight = 39
+      inherited btnSalvar: TSpeedButton
+        Width = 113
+        Height = 39
+      end
+    end
+  end
+  inherited pnlLinhaLeft: TPanel
+    Height = 727
+    Color = clWhite
+  end
+  inherited pnlLinhaRight: TPanel
+    Height = 727
+    Color = clWhite
+  end
+  object pnlDetalhe: TPanel
+    Left = 0
+    Top = 41
+    Width = 305
+    Height = 4
+    BevelOuter = bvNone
+    Color = 1557580
+    ParentBackground = False
+    TabOrder = 4
+  end
+end

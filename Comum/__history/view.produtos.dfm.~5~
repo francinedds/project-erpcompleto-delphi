@@ -1,0 +1,38 @@
+inherited ViewProdutos: TViewProdutos
+  Margins.Top = 0
+  Caption = 'ViewProdutos'
+  Position = poMainFormCenter
+  TextHeight = 15
+  inherited pnlTopo: TPanel
+    inherited pnlUsuarios: TPanel
+      inherited pnlBotoes: TPanel
+        inherited pnlBtnNovo: TPanel
+          inherited btnNovo: TSpeedButton
+            OnClick = btnNovoClick
+          end
+        end
+      end
+    end
+    inherited pnlTitulo: TPanel
+      inherited lblTitulo: TLabel
+        Caption = 'Produtos'
+        ExplicitWidth = 67
+      end
+    end
+  end
+  inherited pnlBottom: TPanel
+    Visible = True
+    inherited pnlBtnSalvar: TPanel
+      ExplicitLeft = 1022
+      inherited btnSalvar: TSpeedButton
+        ExplicitLeft = -9
+        ExplicitTop = 0
+        ExplicitWidth = 89
+        ExplicitHeight = 39
+      end
+    end
+  end
+  inherited pnlLinhaRight: TPanel
+    ExplicitLeft = 1110
+  end
+end

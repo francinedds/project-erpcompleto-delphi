@@ -1,0 +1,26 @@
+unit view.clientes;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, view.base.listas, Vcl.StdCtrls,
+  Vcl.Imaging.jpeg, Vcl.ExtCtrls, Vcl.Buttons;
+
+type
+  TViewClientes = class(TViewBaseListas)
+    pnlDetalhe: TPanel;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ViewClientes: TViewClientes;
+
+implementation
+
+{$R *.dfm}
+
+end.

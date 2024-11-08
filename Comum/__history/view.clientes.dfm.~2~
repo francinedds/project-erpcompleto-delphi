@@ -1,0 +1,12 @@
+inherited ViewClientes: TViewClientes
+  Caption = 'Clientes'
+  TextHeight = 15
+  inherited pnlTopo: TPanel
+    inherited pnlTitulo: TPanel
+      inherited lblTitulo: TLabel
+        Caption = 'Clientes'
+        ExplicitWidth = 61
+      end
+    end
+  end
+end
