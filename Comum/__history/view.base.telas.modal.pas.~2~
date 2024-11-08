@@ -1,0 +1,42 @@
+unit view.base.telas.modal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, view.base, Vcl.ExtCtrls, Vcl.Buttons,
+  Vcl.StdCtrls, Vcl.Imaging.jpeg;
+
+type
+  TViewBaseTelasModal = class(TViewBase)
+    pnlTopo: TPanel;
+    pnlUsuarios: TPanel;
+    pnlBotoes: TPanel;
+    pnlBotaoFechar: TPanel;
+    btnFechar: TSpeedButton;
+    pnlLogo: TPanel;
+    logo: TImage;
+    pnlTitulo: TPanel;
+    lblTitulo: TLabel;
+    pnlBottom: TPanel;
+    procedure btnFecharClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ViewBaseTelasModal: TViewBaseTelasModal;
+
+implementation
+
+{$R *.dfm}
+
+procedure TViewBaseTelasModal.btnFecharClick(Sender: TObject);
+begin
+  inherited;
+  self.Close
+end;
+
+end.

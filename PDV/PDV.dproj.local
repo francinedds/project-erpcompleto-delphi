@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/04/22 10:24:19.000.684,=C:\Users\EMANUEL\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/04/22 13:37:38.000.014,=C:\Users\EMANUEL\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/04/30 14:27:27.000.881,=C:\Users\EMANUEL\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/04/30 15:07:24.000.680,=C:\Users\EMANUEL\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/05/08 10:20:11.000.391,=C:\Users\EMANUEL\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/07/30 09:16:45.000.939,=C:\Users\EMANUEL\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/08/12 09:35:15.000.608,=C:\Users\EMANUEL\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2024/08/12 09:35:43.000.792,=C:\Users\EMANUEL\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2024/08/12 09:36:34.000.646,=C:\Users\EMANUEL\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2024/08/16 13:48:48.000.311,=C:\Users\EMANUEL\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2024/10/23 12:37:52.000.508,=C:\Users\EMANUEL\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2024/10/23 12:42:03.000.745,=C:\Users\EMANUEL\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2024/10/29 13:27:46.000.590,=C:\Users\EMANUEL\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2024/10/31 12:57:19.000.614,=C:\Users\EMANUEL\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2024/10/31 13:01:09.000.115,C:\Users\EMANUEL\Documents\Embarcadero\Studio\Projects\Unit2.dfm=C:\Users\EMANUEL\Desktop\+\Projeto ERPCompleto DelphiGov\Comum\view.base.dfm</Transaction>
+    <Transaction>2024/10/31 13:01:09.000.115,C:\Users\EMANUEL\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\EMANUEL\Desktop\+\Projeto ERPCompleto DelphiGov\Comum\view.base.pas</Transaction>
+    <Transaction>2024/10/31 13:02:23.000.718,=C:\Users\EMANUEL\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2024/10/31 13:02:46.000.957,C:\Users\EMANUEL\Documents\Embarcadero\Studio\Projects\Unit2.dfm=C:\Users\EMANUEL\Desktop\+\Projeto ERPCompleto DelphiGov\PDV\view.pdv.dfm</Transaction>
+    <Transaction>2024/10/31 13:02:46.000.957,C:\Users\EMANUEL\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\EMANUEL\Desktop\+\Projeto ERPCompleto DelphiGov\PDV\view.pdv.pas</Transaction>
+    <Transaction>2024/10/31 13:10:36.000.542,C:\Users\EMANUEL\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\EMANUEL\Documents\Embarcadero\Studio\Projects\PDV.dproj</Transaction>
+    <Transaction>2024/10/31 13:11:27.000.496,C:\Users\EMANUEL\Documents\Embarcadero\Studio\Projects\PDV.dproj=C:\Users\EMANUEL\Desktop\+\Projeto ERPCompleto DelphiGov\PDV\PDV.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

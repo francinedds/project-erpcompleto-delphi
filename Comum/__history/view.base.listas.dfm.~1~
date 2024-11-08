@@ -1,0 +1,4 @@
+inherited ViewBase1: TViewBase1
+  Caption = 'ViewBase1'
+  TextHeight = 15
+end

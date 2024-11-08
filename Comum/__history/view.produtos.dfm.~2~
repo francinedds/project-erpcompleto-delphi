@@ -1,0 +1,56 @@
+inherited ViewProdutos: TViewProdutos
+  Margins.Top = 0
+  Caption = 'ViewProdutos'
+  Position = poMainFormCenter
+  TextHeight = 15
+  inherited pnlTopo: TPanel
+    OnMouseDown = nil
+    inherited pnlTitulo: TPanel
+      inherited lblTitulo: TLabel
+        Caption = 'Produtos'
+        ExplicitWidth = 67
+      end
+    end
+  end
+  inherited pnlBottom: TPanel
+    Visible = True
+    inherited pnlBtnSalvar: TPanel
+      AlignWithMargins = True
+      Left = 1024
+      Top = 3
+      Height = 33
+      inherited btnSalvar: TSpeedButton
+        Height = 33
+        OnClick = nil
+        ExplicitLeft = -9
+        ExplicitTop = 0
+        ExplicitWidth = 89
+        ExplicitHeight = 39
+      end
+    end
+  end
+  object pnlLinha: TPanel
+    Left = 0
+    Top = 41
+    Width = 3
+    Height = 733
+    Align = alLeft
+    BevelOuter = bvNone
+    Color = 5263440
+    ParentBackground = False
+    TabOrder = 2
+  end
+  object pnlLinha2: TPanel
+    Left = 1113
+    Top = 41
+    Width = 3
+    Height = 733
+    Align = alRight
+    BevelOuter = bvNone
+    Color = 5263440
+    ParentBackground = False
+    TabOrder = 3
+    ExplicitLeft = 8
+    ExplicitTop = 49
+  end
+end

@@ -1,0 +1,13 @@
+program ERP;
+
+uses
+  Vcl.Forms,
+  view.base in '..\Comum\view.base.pas' {ViewBase};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.Run;
+end.

@@ -1,0 +1,14 @@
+inherited ViewBaseTelasModal1: TViewBaseTelasModal1
+  Caption = 'ViewBaseTelasModal1'
+  TextHeight = 15
+  inherited pnlTopo: TPanel
+    inherited pnlTitulo: TPanel
+      inherited lblTitulo: TLabel
+        ExplicitLeft = 10
+        ExplicitTop = 3
+        ExplicitWidth = 101
+        ExplicitHeight = 18
+      end
+    end
+  end
+end

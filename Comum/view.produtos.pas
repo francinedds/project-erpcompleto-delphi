@@ -1,0 +1,37 @@
+unit view.produtos;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, view.base.listas, Vcl.StdCtrls,
+  Vcl.Imaging.jpeg, Vcl.ExtCtrls, Vcl.Buttons, view.modal.cadastro.produto;
+
+type
+  TViewProdutos = class(TViewBaseListas)
+    procedure btnNovoClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ViewProdutos: TViewProdutos;
+
+implementation
+
+{$R *.dfm}
+
+procedure TViewProdutos.btnNovoClick(Sender: TObject);
+begin
+  inherited;
+  ViewModalCadastroProduto := TViewModalCadastroProduto.Create(Self);
+  try
+    ViewModalCadastroProduto.ShowModal;
+  finally
+    FreeAndNil(ViewModalCadastroProduto);
+  end;
+end;
+
+end.

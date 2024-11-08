@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{2F855399-0253-424A-A200-F5EABB78CBBB}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="PDV\PDV.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ERP\ERP.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="PDV">
+        <MSBuild Projects="PDV\PDV.dproj"/>
+    </Target>
+    <Target Name="PDV:Clean">
+        <MSBuild Projects="PDV\PDV.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PDV:Make">
+        <MSBuild Projects="PDV\PDV.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ERP">
+        <MSBuild Projects="ERP\ERP.dproj"/>
+    </Target>
+    <Target Name="ERP:Clean">
+        <MSBuild Projects="ERP\ERP.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ERP:Make">
+        <MSBuild Projects="ERP\ERP.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="PDV;ERP"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="PDV:Clean;ERP:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="PDV:Make;ERP:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

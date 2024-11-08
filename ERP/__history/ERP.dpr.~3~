@@ -1,0 +1,16 @@
+program ERP;
+
+uses
+  Vcl.Forms,
+  view.base in '..\Comum\view.base.pas' {ViewBase},
+  view.principal in 'view.principal.pas' {ViewPrincipal},
+  service.conexao in '..\Comum\service.conexao.pas' {ServiceConexao: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TViewPrincipal, ViewPrincipal);
+  Application.Run;
+end.

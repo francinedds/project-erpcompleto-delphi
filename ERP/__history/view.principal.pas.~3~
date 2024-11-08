@@ -1,0 +1,74 @@
+unit view.principal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, view.base, Vcl.Buttons, Vcl.StdCtrls,
+  Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.Imaging.jpeg;
+
+type
+  TViewPrincipal = class(TViewBase)
+    pnlTopo: TPanel;
+    pnlLogo: TPanel;
+    pnlUsuarios: TPanel;
+    pnlImgUser: TPanel;
+    imgUser: TImage;
+    pnlDadosUser: TPanel;
+    lblNomeUser: TLabel;
+    lblPerfilUser: TLabel;
+    pnlMenu: TPanel;
+    pnlBotaoSair: TPanel;
+    btnSair: TSpeedButton;
+    pnlMovimentos: TPanel;
+    pnlBtnClientes: TPanel;
+    btnClientes: TSpeedButton;
+    pnlTitleMovimentos: TPanel;
+    lblTitleMovimentos: TLabel;
+    pnlBtnProdutos: TPanel;
+    btnProdutos: TSpeedButton;
+    pnlBtnVendas: TPanel;
+    btnVendas: TSpeedButton;
+    pnlFiscal: TPanel;
+    pnlBotaoNFe: TPanel;
+    btnNFe: TSpeedButton;
+    pnlTitleFiscais: TPanel;
+    lblTitleFiscais: TLabel;
+    pnlBotaoNFCe: TPanel;
+    btnNFCe: TSpeedButton;
+    pnlConfig: TPanel;
+    pnlTitleConfig: TPanel;
+    CONFIGURAÇÕES: TLabel;
+    pnlBotaoConfig: TPanel;
+    btnConfig: TSpeedButton;
+    Image1: TImage;
+    procedure btnSairClick(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ViewPrincipal: TViewPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+procedure TViewPrincipal.btnSairClick(Sender: TObject);
+begin
+  inherited;
+  Self.Close;
+end;
+
+procedure TViewPrincipal.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  inherited;
+    if (Key = VK_ESCAPE) then
+    Self.Close;
+end;
+
+end.
