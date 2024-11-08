@@ -1,3 +1,8 @@
 # Project ERP completo + Firebird 2.5
-- @delphigov
+- Projeto desenvolvido no meu estágio
+- Em andamento
+-  @delphigov
+
+![Texto alternativo](https://github.com/francinedds/project-erpcompleto-delphi/blob/main/src/mockup-sistema-erp.png)
+
  
