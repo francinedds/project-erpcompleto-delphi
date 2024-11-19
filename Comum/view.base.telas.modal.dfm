@@ -4,6 +4,7 @@ inherited ViewBaseTelasModal: TViewBaseTelasModal
   Caption = 'ViewBaseTelasModal'
   ClientHeight = 459
   ClientWidth = 669
+  Color = clWhite
   ExplicitWidth = 669
   ExplicitHeight = 459
   TextHeight = 15
@@ -26,8 +27,6 @@ inherited ViewBaseTelasModal: TViewBaseTelasModal
       Align = alRight
       BevelOuter = bvNone
       TabOrder = 0
-      ExplicitLeft = 863
-      ExplicitHeight = 41
       object pnlBotoes: TPanel
         Left = 0
         Top = 0
@@ -36,7 +35,6 @@ inherited ViewBaseTelasModal: TViewBaseTelasModal
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 0
-        ExplicitHeight = 41
         object pnlBtnFechar: TPanel
           Left = 168
           Top = 0
@@ -47,7 +45,6 @@ inherited ViewBaseTelasModal: TViewBaseTelasModal
           Color = 4605510
           ParentBackground = False
           TabOrder = 0
-          ExplicitHeight = 41
           object btnFechar: TSpeedButton
             Left = 0
             Top = 0
@@ -1091,8 +1088,6 @@ inherited ViewBaseTelasModal: TViewBaseTelasModal
       Align = alLeft
       BevelOuter = bvNone
       TabOrder = 2
-      ExplicitLeft = 105
-      ExplicitHeight = 41
       object lblTitulo: TLabel
         AlignWithMargins = True
         Left = 10
@@ -1109,10 +1104,8 @@ inherited ViewBaseTelasModal: TViewBaseTelasModal
         Font.Style = [fsBold]
         ParentFont = False
         Layout = tlCenter
-        ExplicitLeft = 16
-        ExplicitTop = -1
-        ExplicitWidth = 185
-        ExplicitHeight = 41
+        ExplicitWidth = 101
+        ExplicitHeight = 18
       end
     end
   end
@@ -1170,8 +1163,6 @@ inherited ViewBaseTelasModal: TViewBaseTelasModal
     Color = 5263440
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 41
-    ExplicitHeight = 382
   end
   object pnlLinhaRight: TPanel
     Left = 667
@@ -1183,8 +1174,5 @@ inherited ViewBaseTelasModal: TViewBaseTelasModal
     Color = 5263440
     ParentBackground = False
     TabOrder = 3
-    ExplicitLeft = 666
-    ExplicitTop = 41
-    ExplicitHeight = 382
   end
 end

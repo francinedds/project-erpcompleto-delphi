@@ -1,6 +1,6 @@
 inherited ViewProdutos: TViewProdutos
   Margins.Top = 0
-  Caption = 'ViewProdutos'
+  Caption = 'Produtos'
   Position = poMainFormCenter
   TextHeight = 15
   inherited pnlTopo: TPanel
@@ -15,15 +15,19 @@ inherited ViewProdutos: TViewProdutos
     end
     inherited pnlTitulo: TPanel
       inherited lblTitulo: TLabel
+        Caption = 'ESTOQUE'
+        ExplicitWidth = 72
+      end
+    end
+    inherited pblTitulo2: TPanel
+      inherited lblTitulo2: TLabel
         Caption = 'Produtos'
         ExplicitWidth = 67
       end
     end
   end
   inherited pnlBottom: TPanel
-    Visible = True
     inherited pnlBtnSalvar: TPanel
-      ExplicitLeft = 1022
       inherited btnSalvar: TSpeedButton
         ExplicitLeft = -9
         ExplicitTop = 0
@@ -32,7 +36,44 @@ inherited ViewProdutos: TViewProdutos
       end
     end
   end
-  inherited pnlLinhaRight: TPanel
-    ExplicitLeft = 1110
+  inherited pnlDetalhe: TPanel
+    inherited Detalhe: TPanel
+      Color = 1557580
+    end
+  end
+  inherited pnlConteudo: TPanel
+    Margins.Top = 15
+    Margins.Right = 0
+    inherited card_dados: TCardPanel
+      Top = 41
+      Height = 682
+      TabOrder = 1
+      ExplicitTop = 41
+      ExplicitHeight = 682
+      inherited card_vazio: TCard
+        Height = 682
+        ExplicitHeight = 682
+        inherited lblVazio: TLabel
+          Height = -18
+        end
+      end
+      inherited card_duascolunas: TCard
+        Height = 682
+        ExplicitHeight = 682
+      end
+    end
+    object SearchBox: TSearchBox
+      AlignWithMargins = True
+      Left = 0
+      Top = 15
+      Width = 1110
+      Height = 23
+      Margins.Left = 0
+      Margins.Top = 15
+      Margins.Right = 0
+      Align = alTop
+      TabOrder = 0
+      Text = 'Pesquisar...'
+    end
   end
 end

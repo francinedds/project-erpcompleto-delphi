@@ -1,0 +1,32 @@
+inherited ViewClientes: TViewClientes
+  Caption = 'Clientes'
+  TextHeight = 15
+  inherited pnlTopo: TPanel
+    inherited pnlTitulo: TPanel
+      Font.Color = clWhite
+      ParentFont = False
+      inherited lblTitulo: TLabel
+        Caption = 'PESSOAS'
+        ParentColor = False
+        ExplicitWidth = 100
+      end
+    end
+    inherited pblTitulo2: TPanel
+      inherited lblTitulo2: TLabel
+        Caption = 'Clientes'
+        ExplicitWidth = 331
+      end
+    end
+  end
+  inherited pnlConteudo: TPanel
+    inherited card_dados: TCardPanel
+      inherited card_duascolunas: TCard
+        inherited ViewFrameDuasColunas1: TViewFrameDuasColunas
+          inherited ViewFrameDuasColunas: TControlList
+            Visible = True
+          end
+        end
+      end
+    end
+  end
+end

@@ -1,0 +1,53 @@
+unit view.produtos;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Imaging.jpeg, Vcl.ExtCtrls, Vcl.Buttons,
+  view.modal.cadastro.produto, Vcl.Imaging.pngimage, Vcl.WinXCtrls, Vcl.WinXPanels, service.estoque,
+  view.base.listas, View.Frame.Duas.Colunas;
+
+type
+  TViewProdutos = class(TViewBaseListas)
+    SearchBox: TSearchBox;
+    procedure btnNovoClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+  private
+    procedure GetProdutos;
+  public
+    { Public declarations }
+  end;
+
+var
+  ViewProdutos: TViewProdutos;
+
+implementation
+
+{$R *.dfm}
+
+procedure TViewProdutos.btnNovoClick(Sender: TObject);
+begin
+  inherited;
+  ViewModalCadastroProduto := TViewModalCadastroProduto.Create(Self);
+  try
+    ViewModalCadastroProduto.ShowModal;
+  finally
+    FreeAndNil(ViewModalCadastroProduto);
+  end;
+end;
+
+procedure TViewProdutos.FormCreate(Sender: TObject);
+begin
+  inherited;
+  //ViewFrameDuasColunas.dsListas := FServiceEstoque.FQueryProdutoCabecalho;
+  //ViewFrameDuasColunas.dsListas.OnDataChange := DataSourceDataChange;
+end;
+
+procedure TViewProdutos.GetProdutos;
+begin
+  //ViewFrameDuasColunas.controlList.ItemCount := 0;
+  //FServiceEstoque.GetProdutos;
+end;
+
+end.

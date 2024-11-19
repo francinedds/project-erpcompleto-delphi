@@ -11,6 +11,8 @@ object ViewBase: TViewBase
   Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
   OnKeyDown = FormKeyDown
   OnKeyPress = FormKeyPress
   TextHeight = 15

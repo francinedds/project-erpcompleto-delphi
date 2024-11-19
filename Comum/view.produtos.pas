@@ -4,14 +4,17 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, view.base.listas, Vcl.StdCtrls,
-  Vcl.Imaging.jpeg, Vcl.ExtCtrls, Vcl.Buttons, view.modal.cadastro.produto;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Imaging.jpeg, Vcl.ExtCtrls, Vcl.Buttons,
+  view.modal.cadastro.produto, Vcl.Imaging.pngimage, Vcl.WinXCtrls, Vcl.WinXPanels, service.estoque,
+  view.base.listas;
 
 type
   TViewProdutos = class(TViewBaseListas)
+    SearchBox: TSearchBox;
     procedure btnNovoClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
-    { Private declarations }
+    procedure GetProdutos;
   public
     { Public declarations }
   end;
@@ -32,6 +35,19 @@ begin
   finally
     FreeAndNil(ViewModalCadastroProduto);
   end;
+end;
+
+procedure TViewProdutos.FormCreate(Sender: TObject);
+begin
+  inherited;
+  //ViewFrameDuasColunas.dsLista.DataSet := FServiceEstoque.FQueryProdutoCabecalho;
+  //ViewFrameDuasColunas.dsLista.OnDataChange := DataSourceDataChange;
+end;
+
+procedure TViewProdutos.GetProdutos;
+begin
+  //ViewFrameDuasColunas.controlList.ItemCount := 0;
+  //FServiceEstoque.GetProdutos;
 end;
 
 end.

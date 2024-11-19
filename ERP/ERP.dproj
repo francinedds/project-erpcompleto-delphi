@@ -117,8 +117,6 @@
             <Form>ViewBaseTelasModal</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="..\Comum\classe.empresa.pas"/>
-        <DCCReference Include="..\Comum\classe.sistema.pas"/>
         <DCCReference Include="..\Comum\view.base.listas.pas">
             <Form>ViewBaseListas</Form>
             <FormType>dfm</FormType>
@@ -131,6 +129,17 @@
             <Form>ViewModalCadastroProduto</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="..\Comum\view.clientes.pas">
+            <Form>ViewClientes</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\Comum\service.estoque.pas">
+            <Form>ServiceEstoque</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Comum\classe.sistema.pas"/>
+        <DCCReference Include="..\Comum\classe.empresa.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

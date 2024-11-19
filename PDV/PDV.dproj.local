@@ -18,9 +18,13 @@
     <Transaction>2024/10/31 13:01:09.000.115,C:\Users\EMANUEL\Documents\Embarcadero\Studio\Projects\Unit2.dfm=C:\Users\EMANUEL\Desktop\+\Projeto ERPCompleto DelphiGov\Comum\view.base.dfm</Transaction>
     <Transaction>2024/10/31 13:01:09.000.115,C:\Users\EMANUEL\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\EMANUEL\Desktop\+\Projeto ERPCompleto DelphiGov\Comum\view.base.pas</Transaction>
     <Transaction>2024/10/31 13:02:23.000.718,=C:\Users\EMANUEL\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
-    <Transaction>2024/10/31 13:02:46.000.957,C:\Users\EMANUEL\Documents\Embarcadero\Studio\Projects\Unit2.dfm=C:\Users\EMANUEL\Desktop\+\Projeto ERPCompleto DelphiGov\PDV\view.pdv.dfm</Transaction>
     <Transaction>2024/10/31 13:02:46.000.957,C:\Users\EMANUEL\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\EMANUEL\Desktop\+\Projeto ERPCompleto DelphiGov\PDV\view.pdv.pas</Transaction>
+    <Transaction>2024/10/31 13:02:46.000.957,C:\Users\EMANUEL\Documents\Embarcadero\Studio\Projects\Unit2.dfm=C:\Users\EMANUEL\Desktop\+\Projeto ERPCompleto DelphiGov\PDV\view.pdv.dfm</Transaction>
     <Transaction>2024/10/31 13:10:36.000.542,C:\Users\EMANUEL\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\EMANUEL\Documents\Embarcadero\Studio\Projects\PDV.dproj</Transaction>
     <Transaction>2024/10/31 13:11:27.000.496,C:\Users\EMANUEL\Documents\Embarcadero\Studio\Projects\PDV.dproj=C:\Users\EMANUEL\Desktop\+\Projeto ERPCompleto DelphiGov\PDV\PDV.dproj</Transaction>
+    <Transaction>2024/11/19 09:13:04.000.722,=C:\Users\EMANUEL\Desktop\+\Projeto ERPCompleto DelphiGov\PDV\Unit1.pas</Transaction>
+    <Transaction>2024/11/19 09:13:35.000.192,C:\Users\EMANUEL\Desktop\+\Projeto ERPCompleto DelphiGov\Comum\classe.sistema.pas=C:\Users\EMANUEL\Desktop\+\Projeto ERPCompleto DelphiGov\PDV\Unit1.pas</Transaction>
+    <Transaction>2024/11/19 09:14:16.000.067,C:\Users\EMANUEL\Desktop\+\Projeto ERPCompleto DelphiGov\Comum\classe.sistema.pas=</Transaction>
+    <Transaction>2024/11/19 09:14:42.000.834,=C:\Users\EMANUEL\Desktop\+\Projeto ERPCompleto DelphiGov\PDV\Unit1.pas</Transaction>
   </Transactions>
 </BorlandProject>

@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, view.base.listas, Vcl.StdCtrls,
-  Vcl.Imaging.jpeg, Vcl.ExtCtrls, Vcl.Buttons;
+  Vcl.Imaging.jpeg, Vcl.ExtCtrls, Vcl.Buttons, Vcl.Imaging.pngimage, Vcl.WinXPanels;
 
 type
   TViewClientes = class(TViewBaseListas)

@@ -1,0 +1,26 @@
+inherited ViewClientes: TViewClientes
+  Caption = 'Clientes'
+  TextHeight = 15
+  inherited pnlTopo: TPanel
+    inherited pnlTitulo: TPanel
+      Font.Color = clWhite
+      ParentFont = False
+      inherited lblTitulo: TLabel
+        Caption = 'PESSOAS'
+        ParentColor = False
+        ExplicitLeft = 10
+        ExplicitTop = 3
+        ExplicitWidth = 71
+        ExplicitHeight = 18
+      end
+    end
+    inherited pblTitulo2: TPanel
+      inherited lblTitulo2: TLabel
+        Caption = 'Clientes'
+        ExplicitLeft = 10
+        ExplicitWidth = 61
+        ExplicitHeight = 18
+      end
+    end
+  end
+end

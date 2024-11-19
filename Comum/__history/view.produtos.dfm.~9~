@@ -1,0 +1,81 @@
+inherited ViewProdutos: TViewProdutos
+  Margins.Top = 0
+  Caption = 'Produtos'
+  Position = poMainFormCenter
+  TextHeight = 15
+  inherited pnlTopo: TPanel
+    inherited pnlUsuarios: TPanel
+      inherited pnlBotoes: TPanel
+        inherited pnlBtnNovo: TPanel
+          inherited btnNovo: TSpeedButton
+            OnClick = btnNovoClick
+          end
+        end
+      end
+    end
+    inherited pnlTitulo: TPanel
+      inherited lblTitulo: TLabel
+        Caption = 'ESTOQUE'
+        ExplicitLeft = 10
+        ExplicitTop = 3
+        ExplicitWidth = 72
+        ExplicitHeight = 18
+      end
+    end
+    inherited pnlSeta: TPanel
+      ExplicitLeft = 113
+    end
+    inherited pblTitulo2: TPanel
+      ExplicitLeft = 153
+      inherited lblTitulo2: TLabel
+        Caption = 'Produtos'
+        ExplicitLeft = 10
+        ExplicitWidth = 67
+        ExplicitHeight = 18
+      end
+    end
+  end
+  inherited pnlBottom: TPanel
+    inherited pnlBtnSalvar: TPanel
+      inherited btnSalvar: TSpeedButton
+        ExplicitLeft = -9
+        ExplicitTop = 0
+        ExplicitWidth = 89
+        ExplicitHeight = 39
+      end
+    end
+  end
+  inherited pnlDetalhe: TPanel
+    ExplicitWidth = 297
+    inherited Detalhe: TPanel
+      Color = 1557580
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitHeight = 4
+    end
+  end
+  inherited pnlConteudo: TPanel
+    Margins.Top = 15
+    Margins.Right = 0
+    ExplicitLeft = 3
+    ExplicitTop = 112
+    ExplicitWidth = 1110
+    ExplicitHeight = 656
+    object SearchBox: TSearchBox
+      AlignWithMargins = True
+      Left = 0
+      Top = 15
+      Width = 1110
+      Height = 23
+      Margins.Left = 0
+      Margins.Top = 15
+      Margins.Right = 0
+      Align = alTop
+      TabOrder = 0
+      Text = 'Pesquisar...'
+      ExplicitLeft = 112
+      ExplicitTop = 224
+      ExplicitWidth = 121
+    end
+  end
+end

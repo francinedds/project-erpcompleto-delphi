@@ -4,14 +4,20 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, classe.sistema;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, service.estoque;
 
 type
   TViewBase = class(TForm)
     procedure FormKeyPress(Sender: TObject; var Key: Char);
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
   private
     { Private declarations }
+
+  published
+  //FServiceEstoque: TServiceEstoque;
+
   public
     { Public declarations }
   end;
@@ -22,6 +28,16 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TViewBase.FormCreate(Sender: TObject);
+begin
+  //FServiceEstoque.FDQueryProdutoCabecalho.Create(nil);
+end;
+
+procedure TViewBase.FormDestroy(Sender: TObject);
+begin
+  //FreeAndNil(FServiceEstoque);
+end;
 
 procedure TViewBase.FormKeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);

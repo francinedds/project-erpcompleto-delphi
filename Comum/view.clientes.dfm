@@ -6,9 +6,15 @@ inherited ViewClientes: TViewClientes
       Font.Color = clWhite
       ParentFont = False
       inherited lblTitulo: TLabel
-        Caption = 'Clientes'
+        Caption = 'PESSOAS'
         ParentColor = False
-        ExplicitWidth = 607
+        ExplicitWidth = 71
+      end
+    end
+    inherited pblTitulo2: TPanel
+      inherited lblTitulo2: TLabel
+        Caption = 'Clientes'
+        ExplicitWidth = 61
       end
     end
   end
