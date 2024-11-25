@@ -13,18 +13,6 @@ uses
 type
   TServiceEstoque = class(TServiceConexao)
     FDQueryProdutoCabecalho: TFDQuery;
-    FDQueryProdutoCabecalhoID: TIntegerField;
-    FDQueryProdutoCabecalhoNOME_PRODUTO: TStringField;
-    FDQueryProdutoCabecalhoCODIGO_BARRAS: TStringField;
-    FDQueryProdutoCabecalhoNCM: TIntegerField;
-    FDQueryProdutoCabecalhoDTA_CADASTRO: TDateField;
-    FDQueryProdutoCabecalhoHRA_CADASTRO: TTimeField;
-    FDQueryProdutoCabecalhoOBSERVACAO: TStringField;
-    FDQueryProdutoCabecalhoID_GRUPO: TIntegerField;
-    FDQueryProdutoCabecalhoID_SUBGRUPO: TIntegerField;
-    FDQueryProdutoCabecalhoID_FABRICANTE: TIntegerField;
-    FDQueryProdutoCabecalhoREFERENCIA: TStringField;
-    FDQueryProdutoCabecalhoVENDE_FRACIONADO: TStringField;
     FDQueryProdutoFilial: TFDQuery;
     FDQueryProdutoFilialID: TIntegerField;
     FDQueryProdutoFilialID_PRODUTO: TIntegerField;
@@ -39,13 +27,39 @@ type
     FDQueryProdutoFilialMARGEM_LUCRO: TBCDField;
     FDQueryProdutoFilialVLR_VENDA: TBCDField;
     FDQueryProdutoFilialATIVO: TStringField;
+    FDQueryProdutoPesquisa: TFDQuery;
+    FDQueryProdutoPesquisaID: TIntegerField;
+    FDQueryProdutoPesquisaNOME_PRODUTO: TStringField;
+    FDQueryProdutoPesquisaCODIGO_BARRAS: TStringField;
+    FDQueryProdutoPesquisaNCM: TIntegerField;
+    FDQueryProdutoPesquisaREFERENCIA: TStringField;
+    FDQueryProdutoPesquisaATIVO: TStringField;
+    FDQueryProdutoPesquisaVLR_VENDA: TBCDField;
+    FDQueryProdutoCabecalhoID: TIntegerField;
+    FDQueryProdutoCabecalhoNOME_PRODUTO: TStringField;
+    FDQueryProdutoCabecalhoCODIGO_BARRAS: TStringField;
+    FDQueryProdutoCabecalhoNCM: TIntegerField;
+    FDQueryProdutoCabecalhoDTA_CADASTRO: TDateField;
+    FDQueryProdutoCabecalhoHRA_CADASTRO: TTimeField;
+    FDQueryProdutoCabecalhoOBSERVACAO: TStringField;
+    FDQueryProdutoCabecalhoID_GRUPO: TIntegerField;
+    FDQueryProdutoCabecalhoID_SUBGRUPO: TIntegerField;
+    FDQueryProdutoCabecalhoID_FABRICANTE: TIntegerField;
+    FDQueryProdutoCabecalhoREFERENCIA: TStringField;
+    FDQueryProdutoCabecalhoVENDE_FRACIONADO: TStringField;
+    FDQueryProdutoCabecalhoATIVO: TStringField;
+    FDQueryProdutoCabecalhoNOME_GRUPO: TStringField;
+    FDQueryProdutoCabecalhoNOME_SUBGRUPO: TStringField;
+    FDQueryProdutoCabecalhoNOME_FABRICANTE: TStringField;
   private
 
   public
-    procedure GetProdutos;
-  var
-    FServiceEstoque: TServiceEstoque;
+     procedure GetProdutosBasico;
+     procedure GetProdutosCompleto(AIdProduto: integer);
   end;
+
+var
+  ServiceEstoque: TServiceEstoque;
 
 implementation
 
@@ -55,11 +69,34 @@ implementation
 
 { TServiceEstoque }
 
-procedure TServiceEstoque.GetProdutos;
-begin //busca produtos
+procedure TServiceEstoque.GetProdutosBasico;
+begin //busca produtos (query mais básica)
   FDQueryProdutoCabecalho.Close;
   FDQueryProdutoCabecalho.SQL.Clear;
-  FDQueryProdutoCabecalho.SQL.Add('select * from produto_cabecalho');
+  FDQueryProdutoPesquisa.SQL.Add('select');
+  FDQueryProdutoPesquisa.SQL.Add('pc.id,');
+  FDQueryProdutoPesquisa.SQL.Add('pc.nome_produto,');
+  FDQueryProdutoPesquisa.SQL.Add('pc.codigo_barras,');
+  FDQueryProdutoPesquisa.SQL.Add('pc.ncm,');
+  FDQueryProdutoPesquisa.SQL.Add('pc.referencia,');
+  FDQueryProdutoPesquisa.SQL.Add('pc.ativo,');
+  FDQueryProdutoPesquisa.SQL.Add('pf.vlr_venda');
+  FDQueryProdutoPesquisa.SQL.Add('from produto_cabecalho pc');
+  FDQueryProdutoPesquisa.SQL.Add('inner join produto_filial pf on (pc.id = pf.id_produto)');
+  //FDQueryProdutoPesquisa.SQL.Add('where pc.codigo_barras starting :nome');
+  FDQueryProdutoPesquisa.SQL.Add('order by id');
+  FDQueryProdutoPesquisa.Open();
+end;
+
+procedure TServiceEstoque.GetProdutosCompleto(AIdProduto: integer);
+begin ////busca produtos (query completa)
+  FDQueryProdutoCabecalho.Close;
+  FDQueryProdutoCabecalho.SQL.Clear;
+  FDQueryProdutoCabecalho.SQL.Add('select');
+  FDQueryProdutoCabecalho.SQL.Add('pc.*');
+  FDQueryProdutoCabecalho.SQL.Add('from produto_cabecalho pc');
+  FDQueryProdutoCabecalho.SQL.Add('where pc.id = :id;');
+  FDQueryProdutoCabecalho.ParamByName('id').AsInteger := AIdProduto;
   FDQueryProdutoCabecalho.Open();
 end;
 

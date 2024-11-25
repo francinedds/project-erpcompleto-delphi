@@ -39,10 +39,20 @@ type
     FDQueryProdutoFilialMARGEM_LUCRO: TBCDField;
     FDQueryProdutoFilialVLR_VENDA: TBCDField;
     FDQueryProdutoFilialATIVO: TStringField;
+    FDQueryProdutoPesquisa: TFDQuery;
+    FDQueryProdutoPesquisaID: TIntegerField;
+    FDQueryProdutoPesquisaNOME_PRODUTO: TStringField;
+    FDQueryProdutoPesquisaCODIGO_BARRAS: TStringField;
+    FDQueryProdutoPesquisaNCM: TIntegerField;
+    FDQueryProdutoPesquisaREFERENCIA: TStringField;
+    FDQueryProdutoPesquisaATIVO: TStringField;
+    FDQueryProdutoPesquisaVLR_VENDA: TBCDField;
   private
-    { Private declarations }
+
   public
-    { Public declarations }
+    procedure GetProdutos;
+  var
+    FServiceEstoque: TServiceEstoque;
   end;
 
 implementation
@@ -50,5 +60,28 @@ implementation
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
 {$R *.dfm}
+
+{ TServiceEstoque }
+
+procedure TServiceEstoque.GetProdutos;
+begin //busca produtos (query mais básica)
+  FDQueryProdutoCabecalho.Close;
+  FDQueryProdutoCabecalho.SQL.Clear;
+
+  FDQueryProdutoPesquisa.SQL.Add('select');
+  FDQueryProdutoPesquisa.SQL.Add('pc.id,');
+  FDQueryProdutoPesquisa.SQL.Add('pc.nome_produto,');
+  FDQueryProdutoPesquisa.SQL.Add('pc.codigo_barras,');
+  FDQueryProdutoPesquisa.SQL.Add('pc.ncm,');
+  FDQueryProdutoPesquisa.SQL.Add('pc.referencia,');
+  FDQueryProdutoPesquisa.SQL.Add('pc.ativo,');
+  FDQueryProdutoPesquisa.SQL.Add('pf.vlr_venda');
+  FDQueryProdutoPesquisa.SQL.Add('from produto_cabecalho pc');
+  FDQueryProdutoPesquisa.SQL.Add('inner join produto_filial pf on (pc.id = pf.id_produto)');
+  //FDQueryProdutoPesquisa.SQL.Add('where pc.codigo_barras starting :nome');
+
+  FDQueryProdutoPesquisa.SQL.Add('order by id');
+  FDQueryProdutoPesquisa.Open();
+end;
 
 end.

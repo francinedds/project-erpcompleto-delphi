@@ -5,7 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, view.base, Vcl.ExtCtrls, Vcl.Buttons,
-  Vcl.StdCtrls, Vcl.Imaging.jpeg;
+  Vcl.StdCtrls, Vcl.Imaging.jpeg, Data.DB, Vcl.Mask,
+  Vcl.DBCtrls, service.estoque;
 
 type
   TViewBaseTelasModal = class(TViewBase)
@@ -23,13 +24,16 @@ type
     btnSalvar: TSpeedButton;
     pnlLinhaLeft: TPanel;
     pnlLinhaRight: TPanel;
+    dsDados: TDataSource;
+    pnlConteudo: TPanel;
     procedure btnFecharClick(Sender: TObject);
     procedure pnlTopoMouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
   private
     { Private declarations }
   public
-    { Public declarations }
+    IdPesquisa: integer;
   end;
 
 var
@@ -43,6 +47,15 @@ procedure TViewBaseTelasModal.btnFecharClick(Sender: TObject);
 begin
   inherited;
   Self.Close;
+end;
+
+procedure TViewBaseTelasModal.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  if Key = VK_ESCAPE then
+  begin
+    Close;
+  end;
 end;
 
 procedure TViewBaseTelasModal.pnlTopoMouseDown(Sender: TObject;

@@ -2,16 +2,16 @@ inherited ViewBaseTelasModal: TViewBaseTelasModal
   Cursor = crHandPoint
   BorderStyle = bsNone
   Caption = 'ViewBaseTelasModal'
-  ClientHeight = 459
-  ClientWidth = 669
+  ClientHeight = 570
+  ClientWidth = 795
   Color = clWhite
-  ExplicitWidth = 669
-  ExplicitHeight = 459
+  ExplicitWidth = 795
+  ExplicitHeight = 570
   TextHeight = 15
   object pnlTopo: TPanel
     Left = 0
     Top = 0
-    Width = 669
+    Width = 795
     Height = 35
     Align = alTop
     BevelOuter = bvNone
@@ -20,7 +20,7 @@ inherited ViewBaseTelasModal: TViewBaseTelasModal
     TabOrder = 0
     OnMouseDown = pnlTopoMouseDown
     object pnlUsuarios: TPanel
-      Left = 412
+      Left = 538
       Top = 0
       Width = 257
       Height = 35
@@ -1111,8 +1111,8 @@ inherited ViewBaseTelasModal: TViewBaseTelasModal
   end
   object pnlBottom: TPanel
     Left = 0
-    Top = 429
-    Width = 669
+    Top = 540
+    Width = 795
     Height = 30
     Align = alBottom
     BevelOuter = bvNone
@@ -1121,7 +1121,7 @@ inherited ViewBaseTelasModal: TViewBaseTelasModal
     TabOrder = 1
     object pnlBtnSalvar: TPanel
       AlignWithMargins = True
-      Left = 580
+      Left = 706
       Top = 3
       Width = 86
       Height = 24
@@ -1157,7 +1157,7 @@ inherited ViewBaseTelasModal: TViewBaseTelasModal
     Left = 0
     Top = 35
     Width = 2
-    Height = 394
+    Height = 505
     Align = alLeft
     BevelOuter = bvNone
     Color = 5263440
@@ -1165,14 +1165,34 @@ inherited ViewBaseTelasModal: TViewBaseTelasModal
     TabOrder = 2
   end
   object pnlLinhaRight: TPanel
-    Left = 667
+    Left = 793
     Top = 35
     Width = 2
-    Height = 394
+    Height = 505
     Align = alRight
     BevelOuter = bvNone
     Color = 5263440
     ParentBackground = False
     TabOrder = 3
+  end
+  object pnlConteudo: TPanel
+    Left = 2
+    Top = 35
+    Width = 791
+    Height = 505
+    Align = alClient
+    BevelOuter = bvNone
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 4
+  end
+  object dsDados: TDataSource
+    DataSet = ServiceEstoque.FDQueryProdutoCabecalho
+    Left = 738
+    Top = 43
   end
 end

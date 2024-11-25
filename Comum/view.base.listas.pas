@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, view.base, Vcl.StdCtrls,
   Vcl.Imaging.jpeg, Vcl.ExtCtrls, Vcl.Buttons, Vcl.Imaging.pngimage,
-  Vcl.WinXPanels;
+  Vcl.WinXPanels, Data.DB, service.estoque;
 
 type
   TViewBaseListas = class(TViewBase)
@@ -35,12 +35,12 @@ type
     card_vazio: TCard;
     card_duascolunas: TCard;
     lblVazio: TLabel;
-    lblTituloTotalRegistro: TLabel;
+    lblTituloRegistro: TLabel;
     lblRegistros: TLabel;
+    dsDadosLista: TDataSource;
+    procedure dsDadosListaDataChange(Sender: TObject; Field: TField);
   private
     { Private declarations }
-  published
-    //procedure DataSourceDataChange(Sender: TObject; Field: TField) virtual;
   public
     { Public declarations }
   end;
@@ -52,17 +52,18 @@ implementation
 
 {$R *.dfm}
 
-//procedure TViewBaseListas.DataSourceDataChange(Sender: TObject; Field: TField);
-//begin
-//  Self.lblRegistros.Caption := TDataSource(Sender).DataSet.RecordCount.ToString;
-//  if TDataSource(Sender).DataSet.RecordCount < 1 then
-//  begin
-//      Self.card_dados.ActiveCard := card_vazio;
-//      Self.lblRegistros.Caption := '0';
-//  end
-//  else begin
-//    Self.card_dados.ActiveCard := card_duascolunas;
-//  end;
-//end;
+
+procedure TViewBaseListas.dsDadosListaDataChange(Sender: TObject; Field: TField);
+begin
+  Self.lblRegistros.Caption := TDataSource(Sender).DataSet.RecordCount.ToString;
+  if TDataSource(Sender).DataSet.RecordCount < 1 then
+  begin
+      Self.card_dados.ActiveCard := card_vazio;
+      Self.lblRegistros.Caption := '0';
+  end
+  else begin
+    Self.card_dados.ActiveCard := card_duascolunas;
+  end;
+end;
 
 end.

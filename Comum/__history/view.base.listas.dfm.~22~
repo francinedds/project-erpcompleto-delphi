@@ -1,0 +1,376 @@
+inherited ViewBaseListas: TViewBaseListas
+  Margins.Left = 10
+  BorderStyle = bsNone
+  Caption = 'ViewBaseListas'
+  ClientHeight = 813
+  ClientWidth = 1116
+  Color = clWhite
+  ExplicitWidth = 1116
+  ExplicitHeight = 813
+  TextHeight = 15
+  object pnlTopo: TPanel
+    Left = 0
+    Top = 0
+    Width = 1116
+    Height = 41
+    Align = alTop
+    BevelOuter = bvNone
+    Color = clWhite
+    ParentBackground = False
+    TabOrder = 0
+    object pnlUsuarios: TPanel
+      Left = 859
+      Top = 0
+      Width = 257
+      Height = 41
+      Align = alRight
+      BevelOuter = bvNone
+      TabOrder = 0
+      object pnlBotoes: TPanel
+        Left = 0
+        Top = 0
+        Width = 257
+        Height = 41
+        Align = alClient
+        BevelOuter = bvNone
+        TabOrder = 0
+        object pnlBtnEditar: TPanel
+          AlignWithMargins = True
+          Left = 168
+          Top = 0
+          Width = 89
+          Height = 41
+          Margins.Top = 0
+          Margins.Right = 0
+          Margins.Bottom = 0
+          Align = alRight
+          BevelOuter = bvNone
+          Color = 4605510
+          ParentBackground = False
+          TabOrder = 0
+          object btnEditar: TSpeedButton
+            Left = 0
+            Top = 0
+            Width = 89
+            Height = 41
+            Cursor = crHandPoint
+            Align = alClient
+            Caption = 'Editar'
+            Flat = True
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -12
+            Font.Name = 'Tahoma'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ExplicitLeft = -56
+            ExplicitTop = -3
+          end
+        end
+        object pnlBtnNovo: TPanel
+          Left = 76
+          Top = 0
+          Width = 89
+          Height = 41
+          Align = alRight
+          BevelOuter = bvNone
+          Color = 4605510
+          ParentBackground = False
+          TabOrder = 1
+          object btnNovo: TSpeedButton
+            Left = 0
+            Top = 0
+            Width = 89
+            Height = 41
+            Cursor = crHandPoint
+            Align = alClient
+            Caption = 'Novo'
+            Flat = True
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -12
+            Font.Name = 'Tahoma'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ExplicitLeft = -24
+          end
+        end
+      end
+    end
+    object pnlTitulo: TPanel
+      Left = 0
+      Top = 0
+      Width = 113
+      Height = 41
+      Align = alLeft
+      BevelOuter = bvNone
+      Color = 5263440
+      ParentBackground = False
+      TabOrder = 1
+      object lblTitulo: TLabel
+        AlignWithMargins = True
+        Left = 10
+        Top = 3
+        Width = 100
+        Height = 35
+        Margins.Left = 10
+        Align = alClient
+        Caption = 'Texto1'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -15
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Layout = tlCenter
+        ExplicitWidth = 52
+        ExplicitHeight = 18
+      end
+    end
+    object pnlSeta: TPanel
+      Left = 113
+      Top = 0
+      Width = 40
+      Height = 41
+      Align = alLeft
+      BevelOuter = bvNone
+      Color = 5263440
+      ParentBackground = False
+      TabOrder = 2
+      object Image1: TImage
+        Left = 0
+        Top = 0
+        Width = 40
+        Height = 41
+        Align = alClient
+        Center = True
+        Picture.Data = {
+          0954506E67496D61676589504E470D0A1A0A0000000D49484452000000180000
+          00180806000000E0773DF8000000017352474200AECE1CE9000001C949444154
+          78DA9556AD4E034110BEEF92AABA6A1E8020AA20A8EA3A82A92269E005803768
+          DF8022D08490A06A08AEBA12873A83E883DCF0EDD1D2DD9BD9B972C9F4E67667
+          F79B9F6F678B227A4091AD066AB21F486DF63FC6DAD410F1ACB14E3DEEB4B10F
+          ECD9DC506EFB3C2C8CFDD46291FA94134F54A700AA7DF8925FBBB369872306A2
+          883C53BBA62C4B60E2645041E91A185E3082236ADF941EE78704F96A6FAAA2D1
+          11F8AC60140F7CDD5356283136D9A574C445CEA7A801A865C0EF0DD53E65C45A
+          ACDDEC6816B9D5DA4531A336E7C82701CEBA4B611559E5340108DE872806940B
+          827C6837D243AA53D4410E82DC515B50AB80F2D831FDD5BB0F51CA0A32AA5734
+          8C12320B578CE2CD73E8F008B6162D8070F05EF311203DC9267C6B9229BAE5EB
+          9152514E08507BCEE95EE4E8F4BE2F0536688A2C9725CAF7CEF4BA3568E1F02C
+          CCA8CD8B2D4DEDEEEBB48A5645FF0602ED6A91E035298A3E3F473CCD6BB5AD49
+          F74C4654ABA865512050142B7A3FF688A02330AA1F2336CD4EC81C1481414318
+          CD2EF62AD38BF2D724D3F30229A6345872F3897F03662348DB43DC7E09704E43
+          7653B92173AA2CD7323C310BE5A6F61F37E741ADC2DE288D32078678814B252F
+          07CE1F831F4D0EF92129AF16520000000049454E44AE426082}
+        ExplicitLeft = 32
+        ExplicitTop = -6
+      end
+    end
+    object pblTitulo2: TPanel
+      Left = 153
+      Top = 0
+      Width = 344
+      Height = 41
+      Align = alLeft
+      BevelOuter = bvNone
+      Color = 5263440
+      ParentBackground = False
+      TabOrder = 3
+      object lblTitulo2: TLabel
+        AlignWithMargins = True
+        Left = 10
+        Top = 3
+        Width = 331
+        Height = 35
+        Margins.Left = 10
+        Align = alClient
+        Caption = 'Texto2'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -15
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Layout = tlCenter
+        ExplicitWidth = 52
+        ExplicitHeight = 18
+      end
+    end
+  end
+  object pnlBottom: TPanel
+    Left = 0
+    Top = 768
+    Width = 1116
+    Height = 45
+    Align = alBottom
+    BevelOuter = bvNone
+    Color = clWhite
+    ParentBackground = False
+    TabOrder = 1
+    object lblTituloTotalRegistro: TLabel
+      Left = 13
+      Top = 16
+      Width = 137
+      Height = 18
+      Caption = 'Total de registros:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = 5263440
+      Font.Height = -15
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object lblRegistros: TLabel
+      Left = 163
+      Top = 16
+      Width = 10
+      Height = 18
+      Caption = '0'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -15
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object pnlBtnSalvar: TPanel
+      AlignWithMargins = True
+      Left = 1000
+      Top = 3
+      Width = 113
+      Height = 39
+      Align = alRight
+      BevelOuter = bvNone
+      Color = 1557836
+      ParentBackground = False
+      TabOrder = 0
+      object btnSalvar: TSpeedButton
+        Left = 0
+        Top = 0
+        Width = 113
+        Height = 39
+        Cursor = crHandPoint
+        Align = alClient
+        Caption = 'SALVAR'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -12
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+        ExplicitLeft = 32
+        ExplicitTop = 8
+        ExplicitWidth = 23
+        ExplicitHeight = 22
+      end
+    end
+  end
+  object pnlLinhaLeft: TPanel
+    Left = 0
+    Top = 45
+    Width = 3
+    Height = 723
+    Align = alLeft
+    BevelOuter = bvNone
+    Color = clWhite
+    ParentBackground = False
+    TabOrder = 2
+  end
+  object pnlLinhaRight: TPanel
+    Left = 1113
+    Top = 45
+    Width = 3
+    Height = 723
+    Align = alRight
+    BevelOuter = bvNone
+    Color = clWhite
+    ParentBackground = False
+    TabOrder = 3
+  end
+  object pnlDetalhe: TPanel
+    Left = 0
+    Top = 41
+    Width = 1116
+    Height = 4
+    Align = alTop
+    BevelOuter = bvNone
+    Color = clWhite
+    ParentBackground = False
+    TabOrder = 4
+    object Detalhe: TPanel
+      Left = 0
+      Top = 0
+      Width = 185
+      Height = 4
+      Align = alLeft
+      BevelOuter = bvNone
+      Color = 1557836
+      ParentBackground = False
+      TabOrder = 0
+    end
+  end
+  object pnlConteudo: TPanel
+    Left = 3
+    Top = 45
+    Width = 1110
+    Height = 723
+    Align = alClient
+    BevelOuter = bvNone
+    TabOrder = 5
+    object card_dados: TCardPanel
+      Left = 0
+      Top = 0
+      Width = 1110
+      Height = 723
+      Align = alClient
+      ActiveCard = card_vazio
+      BevelOuter = bvNone
+      TabOrder = 0
+      object card_vazio: TCard
+        Left = 0
+        Top = 0
+        Width = 1110
+        Height = 723
+        Caption = 'Vazio'
+        CardIndex = 0
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = 5263440
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 0
+        object lblVazio: TLabel
+          AlignWithMargins = True
+          Left = 3
+          Top = 350
+          Width = 1104
+          Height = 23
+          Margins.Top = 350
+          Margins.Bottom = 350
+          Align = alClient
+          Alignment = taCenter
+          Caption = 'Nenhuma informa'#231#227'o encontrada. Fa'#231'a uma pesquisa!'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 5263440
+          Font.Height = -12
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+          ExplicitWidth = 297
+          ExplicitHeight = 15
+        end
+      end
+      object card_duascolunas: TCard
+        Left = 0
+        Top = 0
+        Width = 1110
+        Height = 723
+        Caption = 'Duas Colunas'
+        CardIndex = 1
+        TabOrder = 1
+      end
+    end
+  end
+end

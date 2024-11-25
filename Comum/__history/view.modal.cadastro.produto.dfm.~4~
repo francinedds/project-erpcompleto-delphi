@@ -1,0 +1,19 @@
+inherited ViewModalCadastroProduto: TViewModalCadastroProduto
+  Caption = 'ViewModalCadastroProduto'
+  Position = poMainFormCenter
+  TextHeight = 15
+  inherited pnlTopo: TPanel
+    inherited pnlTitulo: TPanel
+      inherited lblTitulo: TLabel
+        Caption = 'Cadastro de Produto'
+        ExplicitWidth = 152
+      end
+    end
+  end
+  inherited pnlConteudo: TPanel
+    ExplicitLeft = 2
+    ExplicitTop = 35
+    ExplicitWidth = 665
+    ExplicitHeight = 394
+  end
+end

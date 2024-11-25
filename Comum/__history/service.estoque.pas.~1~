@@ -11,7 +11,7 @@ uses
   FireDAC.Comp.Client;
 
 type
-  TServiceConexao1 = class(TServiceConexao)
+  TServiceEstoque = class(TServiceConexao)
     FDQueryProdutoCabecalho: TFDQuery;
     FDQueryProdutoCabecalhoID: TIntegerField;
     FDQueryProdutoCabecalhoNOME_PRODUTO: TStringField;
@@ -25,19 +25,42 @@ type
     FDQueryProdutoCabecalhoID_FABRICANTE: TIntegerField;
     FDQueryProdutoCabecalhoREFERENCIA: TStringField;
     FDQueryProdutoCabecalhoVENDE_FRACIONADO: TStringField;
+    FDQueryProdutoFilial: TFDQuery;
+    FDQueryProdutoFilialID: TIntegerField;
+    FDQueryProdutoFilialID_PRODUTO: TIntegerField;
+    FDQueryProdutoFilialID_FILIAL: TIntegerField;
+    FDQueryProdutoFilialID_PISCOFINS: TIntegerField;
+    FDQueryProdutoFilialID_IPI: TIntegerField;
+    FDQueryProdutoFilialID_ICMS: TIntegerField;
+    FDQueryProdutoFilialCUSTO_INICIAL: TBCDField;
+    FDQueryProdutoFilialVLR_FRETE: TBCDField;
+    FDQueryProdutoFilialVLR_OUTRASDESPESAS: TBCDField;
+    FDQueryProdutoFilialCUSTO_ENTREGA: TBCDField;
+    FDQueryProdutoFilialMARGEM_LUCRO: TBCDField;
+    FDQueryProdutoFilialVLR_VENDA: TBCDField;
+    FDQueryProdutoFilialATIVO: TStringField;
   private
-    { Private declarations }
-  public
-    { Public declarations }
-  end;
 
-var
-  ServiceConexao1: TServiceConexao1;
+  public
+    procedure GetProdutos;
+  var
+    FServiceEstoque: TServiceEstoque;
+  end;
 
 implementation
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
 {$R *.dfm}
+
+{ TServiceEstoque }
+
+procedure TServiceEstoque.GetProdutos;
+begin //busca produtos
+  FDQueryProdutoCabecalho.Close;
+  FDQueryProdutoCabecalho.SQL.Clear;
+  FDQueryProdutoCabecalho.SQL.Add('select * from produto_cabecalho');
+  FDQueryProdutoCabecalho.Open();
+end;
 
 end.

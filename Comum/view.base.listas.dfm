@@ -207,7 +207,7 @@ inherited ViewBaseListas: TViewBaseListas
     Color = clWhite
     ParentBackground = False
     TabOrder = 1
-    object lblTituloTotalRegistro: TLabel
+    object lblTituloRegistro: TLabel
       Left = 13
       Top = 16
       Width = 137
@@ -221,7 +221,7 @@ inherited ViewBaseListas: TViewBaseListas
       ParentFont = False
     end
     object lblRegistros: TLabel
-      Left = 163
+      Left = 156
       Top = 16
       Width = 10
       Height = 18
@@ -345,8 +345,8 @@ inherited ViewBaseListas: TViewBaseListas
           AlignWithMargins = True
           Left = 3
           Top = 350
-          Width = 1104
-          Height = 23
+          Width = 297
+          Height = 15
           Margins.Top = 350
           Margins.Bottom = 350
           Align = alClient
@@ -358,8 +358,6 @@ inherited ViewBaseListas: TViewBaseListas
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
-          ExplicitWidth = 297
-          ExplicitHeight = 15
         end
       end
       object card_duascolunas: TCard
@@ -372,5 +370,11 @@ inherited ViewBaseListas: TViewBaseListas
         TabOrder = 1
       end
     end
+  end
+  object dsDadosLista: TDataSource
+    DataSet = ServiceEstoque.FDQueryProdutoCabecalho
+    OnDataChange = dsDadosListaDataChange
+    Left = 1051
+    Top = 141
   end
 end
