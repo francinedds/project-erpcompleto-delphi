@@ -14,6 +14,19 @@ type
   TServiceEstoque = class(TServiceConexao)
     FDQueryProdutoCabecalho: TFDQuery;
     FDQueryProdutoFilial: TFDQuery;
+    FDQueryProdutoFilialID: TIntegerField;
+    FDQueryProdutoFilialID_PRODUTO: TIntegerField;
+    FDQueryProdutoFilialID_FILIAL: TIntegerField;
+    FDQueryProdutoFilialID_PISCOFINS: TIntegerField;
+    FDQueryProdutoFilialID_IPI: TIntegerField;
+    FDQueryProdutoFilialID_ICMS: TIntegerField;
+    FDQueryProdutoFilialCUSTO_INICIAL: TBCDField;
+    FDQueryProdutoFilialVLR_FRETE: TBCDField;
+    FDQueryProdutoFilialVLR_OUTRASDESPESAS: TBCDField;
+    FDQueryProdutoFilialCUSTO_ENTREGA: TBCDField;
+    FDQueryProdutoFilialMARGEM_LUCRO: TBCDField;
+    FDQueryProdutoFilialVLR_VENDA: TBCDField;
+    FDQueryProdutoFilialATIVO: TStringField;
     FDQueryProdutoPesquisa: TFDQuery;
     FDQueryProdutoPesquisaID: TIntegerField;
     FDQueryProdutoPesquisaNOME_PRODUTO: TStringField;
@@ -38,19 +51,6 @@ type
     FDQueryProdutoCabecalhoNOME_GRUPO: TStringField;
     FDQueryProdutoCabecalhoNOME_SUBGRUPO: TStringField;
     FDQueryProdutoCabecalhoNOME_FABRICANTE: TStringField;
-    FDQueryProdutoFilialID: TIntegerField;
-    FDQueryProdutoFilialID_PRODUTO: TIntegerField;
-    FDQueryProdutoFilialID_FILIAL: TIntegerField;
-    FDQueryProdutoFilialID_PISCOFINS: TIntegerField;
-    FDQueryProdutoFilialID_IPI: TIntegerField;
-    FDQueryProdutoFilialID_ICMS: TIntegerField;
-    FDQueryProdutoFilialCUSTO_INICIAL: TBCDField;
-    FDQueryProdutoFilialVLR_FRETE: TBCDField;
-    FDQueryProdutoFilialVLR_OUTRASDESPESAS: TBCDField;
-    FDQueryProdutoFilialCUSTO_ENTRADA: TBCDField;
-    FDQueryProdutoFilialMARGEM_LUCRO: TBCDField;
-    FDQueryProdutoFilialVLR_VENDA: TBCDField;
-    FDQueryProdutoFilialATIVO: TStringField;
   private
 
   public

@@ -48,16 +48,6 @@ type
     pnlBtnBuscaICMS: TPanel;
     btnBuscaICMS: TSpeedButton;
     DBEdit5: TComboBox;
-    Label15: TLabel;
-    DBEdit15: TDBEdit;
-    Label16: TLabel;
-    DBEdit16: TDBEdit;
-    Label17: TLabel;
-    DBEdit17: TDBEdit;
-    Label18: TLabel;
-    DBEdit18: TDBEdit;
-    pnlCancelar: TPanel;
-    btnCancelar: TSpeedButton;
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
   private

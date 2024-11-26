@@ -324,7 +324,7 @@ inherited ViewBaseListas: TViewBaseListas
       Width = 1110
       Height = 723
       Align = alClient
-      ActiveCard = card_conteudo
+      ActiveCard = card_duascolunas
       BevelOuter = bvNone
       TabOrder = 0
       object card_vazio: TCard
@@ -345,8 +345,8 @@ inherited ViewBaseListas: TViewBaseListas
           AlignWithMargins = True
           Left = 3
           Top = 350
-          Width = 1104
-          Height = 23
+          Width = 297
+          Height = 15
           Margins.Top = 350
           Margins.Bottom = 350
           Align = alClient
@@ -358,16 +358,14 @@ inherited ViewBaseListas: TViewBaseListas
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
-          ExplicitWidth = 297
-          ExplicitHeight = 15
         end
       end
-      object card_conteudo: TCard
+      object card_duascolunas: TCard
         Left = 0
         Top = 0
         Width = 1110
         Height = 723
-        Caption = 'Conteudo'
+        Caption = 'Duas Colunas'
         CardIndex = 1
         TabOrder = 1
       end

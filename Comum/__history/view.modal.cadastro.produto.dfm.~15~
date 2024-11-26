@@ -73,49 +73,12 @@ inherited ViewModalCadastroProduto: TViewModalCadastroProduto
         ExplicitHeight = 30
       end
     end
-    object pnlCancelar: TPanel
-      AlignWithMargins = True
-      Left = 546
-      Top = 0
-      Width = 121
-      Height = 30
-      Margins.Top = 0
-      Margins.Right = 2
-      Margins.Bottom = 0
-      Align = alRight
-      BevelOuter = bvNone
-      Color = 4605510
-      ParentBackground = False
-      TabOrder = 1
-      ExplicitLeft = 672
-      object btnCancelar: TSpeedButton
-        Left = 0
-        Top = 0
-        Width = 121
-        Height = 30
-        Cursor = crHandPoint
-        Align = alClient
-        Caption = 'CANCELAR'
-        Flat = True
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWhite
-        Font.Height = -12
-        Font.Name = 'Tahoma'
-        Font.Style = [fsBold]
-        ParentFont = False
-        OnClick = btnFecharClick
-        ExplicitLeft = 32
-        ExplicitTop = 8
-      end
-    end
   end
   inherited pnlConteudo: TPanel
     Margins.Left = 2
     Margins.Right = 2
-    Color = clWhite
-    ParentBackground = False
     ExplicitLeft = -3
-    ExplicitTop = 41
+    ExplicitTop = 32
     object Label1: TLabel
       Left = 16
       Top = 32
@@ -157,43 +120,11 @@ inherited ViewModalCadastroProduto: TViewModalCadastroProduto
     end
     object Label6: TLabel
       Left = 16
-      Top = 208
+      Top = 176
       Width = 74
       Height = 13
       Caption = 'OBSERVACAO'
       FocusControl = DBEdit6
-    end
-    object Label15: TLabel
-      Left = 303
-      Top = 125
-      Width = 59
-      Height = 13
-      Caption = 'ID_GRUPO'
-      FocusControl = DBEdit15
-    end
-    object Label16: TLabel
-      Left = 463
-      Top = 125
-      Width = 81
-      Height = 13
-      Caption = 'ID_SUBGRUPO'
-      FocusControl = DBEdit16
-    end
-    object Label17: TLabel
-      Left = 623
-      Top = 128
-      Width = 89
-      Height = 13
-      Caption = 'ID_FABRICANTE'
-      FocusControl = DBEdit17
-    end
-    object Label18: TLabel
-      Left = 390
-      Top = 187
-      Width = 67
-      Height = 13
-      Caption = 'REFERENCIA'
-      FocusControl = DBEdit18
     end
     object DBEdit1: TDBEdit
       Left = 16
@@ -233,7 +164,7 @@ inherited ViewModalCadastroProduto: TViewModalCadastroProduto
     end
     object DBEdit6: TDBEdit
       Left = 16
-      Top = 227
+      Top = 195
       Width = 761
       Height = 21
       DataField = 'OBSERVACAO'
@@ -241,8 +172,8 @@ inherited ViewModalCadastroProduto: TViewModalCadastroProduto
       TabOrder = 4
     end
     object GroupBox1: TGroupBox
-      Left = 13
-      Top = 265
+      Left = 16
+      Top = 241
       Width = 289
       Height = 224
       Caption = 'CUSTO/VENDA'
@@ -300,8 +231,8 @@ inherited ViewModalCadastroProduto: TViewModalCadastroProduto
       end
     end
     object GroupBox2: TGroupBox
-      Left = 317
-      Top = 265
+      Left = 320
+      Top = 241
       Width = 140
       Height = 224
       Caption = 'FISCAL'
@@ -438,9 +369,9 @@ inherited ViewModalCadastroProduto: TViewModalCadastroProduto
       end
     end
     object GroupBox3: TGroupBox
-      Left = 469
-      Top = 265
-      Width = 308
+      Left = 472
+      Top = 241
+      Width = 305
       Height = 224
       Caption = 'OUTROS'
       TabOrder = 7
@@ -482,45 +413,9 @@ inherited ViewModalCadastroProduto: TViewModalCadastroProduto
     object DBEdit5: TComboBox
       Left = 176
       Top = 144
-      Width = 121
+      Width = 145
       Height = 21
       TabOrder = 8
-    end
-    object DBEdit15: TDBEdit
-      Left = 303
-      Top = 144
-      Width = 154
-      Height = 21
-      DataField = 'ID_GRUPO'
-      DataSource = dsDados
-      TabOrder = 9
-    end
-    object DBEdit16: TDBEdit
-      Left = 463
-      Top = 144
-      Width = 154
-      Height = 21
-      DataField = 'ID_SUBGRUPO'
-      DataSource = dsDados
-      TabOrder = 10
-    end
-    object DBEdit17: TDBEdit
-      Left = 623
-      Top = 144
-      Width = 154
-      Height = 21
-      DataField = 'ID_FABRICANTE'
-      DataSource = dsDados
-      TabOrder = 11
-    end
-    object DBEdit18: TDBEdit
-      Left = 463
-      Top = 184
-      Width = 314
-      Height = 21
-      DataField = 'REFERENCIA'
-      DataSource = dsDados
-      TabOrder = 12
     end
   end
   inherited dsDados: TDataSource

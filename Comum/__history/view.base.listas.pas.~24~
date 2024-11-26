@@ -33,7 +33,7 @@ type
     pnlConteudo: TPanel;
     card_dados: TCardPanel;
     card_vazio: TCard;
-    card_conteudo: TCard;
+    card_duascolunas: TCard;
     lblVazio: TLabel;
     lblTituloRegistro: TLabel;
     lblRegistros: TLabel;
@@ -62,7 +62,7 @@ begin
       Self.lblRegistros.Caption := '0';
   end
   else begin
-    Self.card_dados.ActiveCard := card_conteudo;
+    Self.card_dados.ActiveCard := card_duascolunas;
   end;
 end;
 

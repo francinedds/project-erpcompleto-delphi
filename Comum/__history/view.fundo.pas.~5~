@@ -8,10 +8,12 @@ uses
 
 type
   TViewFundo = class(TForm)
+    procedure FormShow(Sender: TObject);
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure FormClick(Sender: TObject);
   private
     class var FInstance: TViewFundo; //cria a instancia
+    procedure AjustarTela();
   public
     class function GetInstance(const APai: TForm): TViewFundo; //devolve instancia
   end;
@@ -25,6 +27,13 @@ implementation
 
 { TViewFundo }
 
+procedure TViewFundo.AjustarTela;
+begin
+//  Self.Top    := Application.MainForm.Top;
+//  Self.Left   := Application.MainForm.Left;
+//  Self.Width  := Application.MainForm.Width;
+//  Self.Height := Application.MainForm.Height;
+end;
 
 procedure TViewFundo.FormClick(Sender: TObject);
 begin
@@ -38,6 +47,11 @@ begin
   begin
     Close;
   end;
+end;
+
+procedure TViewFundo.FormShow(Sender: TObject);
+begin
+  Self.AjustarTela;
 end;
 
 class function TViewFundo.GetInstance(const APai: TForm): TViewFundo;

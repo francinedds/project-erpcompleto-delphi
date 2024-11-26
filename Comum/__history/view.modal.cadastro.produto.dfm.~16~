@@ -73,47 +73,10 @@ inherited ViewModalCadastroProduto: TViewModalCadastroProduto
         ExplicitHeight = 30
       end
     end
-    object pnlCancelar: TPanel
-      AlignWithMargins = True
-      Left = 546
-      Top = 0
-      Width = 121
-      Height = 30
-      Margins.Top = 0
-      Margins.Right = 2
-      Margins.Bottom = 0
-      Align = alRight
-      BevelOuter = bvNone
-      Color = 4605510
-      ParentBackground = False
-      TabOrder = 1
-      ExplicitLeft = 672
-      object btnCancelar: TSpeedButton
-        Left = 0
-        Top = 0
-        Width = 121
-        Height = 30
-        Cursor = crHandPoint
-        Align = alClient
-        Caption = 'CANCELAR'
-        Flat = True
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWhite
-        Font.Height = -12
-        Font.Name = 'Tahoma'
-        Font.Style = [fsBold]
-        ParentFont = False
-        OnClick = btnFecharClick
-        ExplicitLeft = 32
-        ExplicitTop = 8
-      end
-    end
   end
   inherited pnlConteudo: TPanel
     Margins.Left = 2
     Margins.Right = 2
-    Color = clWhite
-    ParentBackground = False
     ExplicitLeft = -3
     ExplicitTop = 41
     object Label1: TLabel

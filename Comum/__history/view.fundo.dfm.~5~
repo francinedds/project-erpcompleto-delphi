@@ -16,5 +16,6 @@ object ViewFundo: TViewFundo
   WindowState = wsMaximized
   OnClick = FormClick
   OnKeyDown = FormKeyDown
+  OnShow = FormShow
   TextHeight = 15
 end

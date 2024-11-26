@@ -154,9 +154,9 @@ inherited ServiceEstoque: TServiceEstoque
       Origin = 'VLR_OUTRASDESPESAS'
       Precision = 18
     end
-    object FDQueryProdutoFilialCUSTO_ENTRADA: TBCDField
-      FieldName = 'CUSTO_ENTRADA'
-      Origin = 'CUSTO_ENTRADA'
+    object FDQueryProdutoFilialCUSTO_ENTREGA: TBCDField
+      FieldName = 'CUSTO_ENTREGA'
+      Origin = 'CUSTO_ENTREGA'
       Precision = 18
     end
     object FDQueryProdutoFilialMARGEM_LUCRO: TBCDField

@@ -56,8 +56,6 @@ type
     DBEdit17: TDBEdit;
     Label18: TLabel;
     DBEdit18: TDBEdit;
-    pnlCancelar: TPanel;
-    btnCancelar: TSpeedButton;
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
   private
