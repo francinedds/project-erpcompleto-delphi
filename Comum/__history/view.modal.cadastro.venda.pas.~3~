@@ -1,0 +1,42 @@
+unit view.modal.cadastro.venda;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, view.base.telas.modal, Data.DB,
+  Vcl.StdCtrls, Vcl.Imaging.jpeg, Vcl.ExtCtrls, Vcl.Buttons, Vcl.WinXCtrls;
+
+type
+  TViewBaseTelasModal1 = class(TViewBaseTelasModal)
+    pnlPesquisa: TPanel;
+    SearchBox: TSearchBox;
+    pnlBtnCancelar: TPanel;
+    btnCancelar: TSpeedButton;
+    pnlBtnFaturar: TPanel;
+    btnFaturar: TSpeedButton;
+    pnlDadosProduto: TPanel;
+    lblProduto: TLabel;
+    edtProduto: TEdit;
+    lblPrecoUnit: TLabel;
+    edtValorUnit: TEdit;
+    lblPercDesconto: TLabel;
+    lblPrecoFinal: TLabel;
+    edtPrecoFinal: TEdit;
+    lblQuantProduto: TLabel;
+    edtQuantProduto: TEdit;
+    edtPercDesconto: TEdit;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ViewBaseTelasModal1: TViewBaseTelasModal1;
+
+implementation
+
+{$R *.dfm}
+
+end.

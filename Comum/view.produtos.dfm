@@ -64,47 +64,56 @@ inherited ViewProdutos: TViewProdutos
       end
       inherited card_conteudo: TCard
         Height = 682
+        ExplicitLeft = 0
+        ExplicitTop = 0
         ExplicitHeight = 682
-        object DBGrid: TDBGrid
+        inherited pnlPeriodo: TPanel
+          Height = 65
+          TabOrder = 1
+          ExplicitHeight = 65
+          inherited lblPerido: TLabel
+            Height = 14
+            ExplicitHeight = 14
+          end
+        end
+        object DBGrid1: TDBGrid
           Left = 0
-          Top = 0
+          Top = 65
           Width = 1110
-          Height = 682
+          Height = 617
           Align = alClient
           BorderStyle = bsNone
-          DataSource = dsDadosLista
+          DataSource = dsDados
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -12
           Font.Name = 'Segoe UI'
           Font.Style = []
-          Options = [dgTitles, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+          Options = [dgEditing, dgTitles, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
           ParentFont = False
           TabOrder = 0
           TitleFont.Charset = DEFAULT_CHARSET
-          TitleFont.Color = 5263440
-          TitleFont.Height = -11
-          TitleFont.Name = 'Tahoma'
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -12
+          TitleFont.Name = 'Segoe UI'
           TitleFont.Style = [fsBold]
           Columns = <
             item
               Expanded = False
               FieldName = 'ID'
-              Width = 48
+              Width = 45
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'NOME_PRODUTO'
-              Title.Caption = 'NOME DO PRODUTO'
-              Width = 131
+              Width = 110
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'CODIGO_BARRAS'
-              Title.Caption = 'C'#211'DIGO DE BARRAS'
-              Width = 134
+              Width = 119
               Visible = True
             end
             item
@@ -115,8 +124,7 @@ inherited ViewProdutos: TViewProdutos
             item
               Expanded = False
               FieldName = 'REFERENCIA'
-              Title.Caption = 'REFER'#202'NCIA'
-              Width = 84
+              Width = 96
               Visible = True
             end
             item
@@ -127,8 +135,7 @@ inherited ViewProdutos: TViewProdutos
             item
               Expanded = False
               FieldName = 'VLR_VENDA'
-              Title.Caption = 'VALOR DA VENDA'
-              Width = 138
+              Width = 117
               Visible = True
             end>
         end
@@ -144,11 +151,19 @@ inherited ViewProdutos: TViewProdutos
       Margins.Top = 15
       Margins.Right = 0
       Align = alTop
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 0
       Text = 'Pesquisar...'
     end
   end
-  inherited dsDadosLista: TDataSource
-    DataSet = ServiceEstoque.FDQueryProdutoPesquisa
+  inherited dsDados: TDataSource
+    OnDataChange = dsDadosDataChange
+    Left = 1059
+    Top = 141
   end
 end

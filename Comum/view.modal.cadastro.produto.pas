@@ -56,10 +56,10 @@ type
     DBEdit17: TDBEdit;
     Label18: TLabel;
     DBEdit18: TDBEdit;
-    pnlCancelar: TPanel;
-    btnCancelar: TSpeedButton;
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure btnSalvarClick(Sender: TObject);
+    procedure btnExcluirClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -73,11 +73,28 @@ implementation
 
 {$R *.dfm}
 
+procedure TViewModalCadastroProduto.btnExcluirClick(Sender: TObject);
+begin
+  inherited;
+  if dsDados.DataSet.RecordCount > 0 then
+  begin
+    dsDados.DataSet.Delete;
+    ShowMessage('Deletado com sucesso!');
+  end;
+end;
+
+procedure TViewModalCadastroProduto.btnSalvarClick(Sender: TObject);
+begin
+  inherited;
+  ServiceEstoque.FDQueryProdutoPesquisa.Post;
+  ShowMessage('Salvo com sucesso!');
+  Self.Close;
+end;
+
 procedure TViewModalCadastroProduto.FormCreate(Sender: TObject);
 begin //create
   inherited;
   //dsDados.DataSet := ServiceEstoque.FDQueryProdutoCabecalho;
-
 end;
 
 procedure TViewModalCadastroProduto.FormShow(Sender: TObject);

@@ -1,0 +1,35 @@
+unit view.clientes;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, view.base.listas, Vcl.StdCtrls,
+  Vcl.Imaging.jpeg, Vcl.ExtCtrls, Vcl.Buttons, Vcl.Imaging.pngimage, Vcl.WinXPanels,
+  Data.DB, service.pessoas, Vcl.Grids, Vcl.DBGrids, Vcl.WinXCtrls;
+
+type
+  TViewClientes = class(TViewBaseListas)
+    SearchBox: TSearchBox;
+    DBGrid1: TDBGrid;
+  private
+    { Private declarations }
+  public
+    procedure GetPessoas;
+  end;
+
+var
+  ViewClientes: TViewClientes;
+
+implementation
+
+{$R *.dfm}
+
+{ TViewClientes }
+
+procedure TViewClientes.GetPessoas;
+begin
+  ServicePessoas.GetPessoas('razao_social', 0);
+end;
+
+end.

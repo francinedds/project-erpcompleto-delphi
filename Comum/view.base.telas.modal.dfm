@@ -5,6 +5,8 @@ inherited ViewBaseTelasModal: TViewBaseTelasModal
   ClientHeight = 570
   ClientWidth = 795
   Color = clWhite
+  Position = poMainFormCenter
+  OnShow = FormShow
   ExplicitWidth = 795
   ExplicitHeight = 570
   TextHeight = 15
@@ -1121,21 +1123,20 @@ inherited ViewBaseTelasModal: TViewBaseTelasModal
     TabOrder = 1
     object pnlBtnSalvar: TPanel
       AlignWithMargins = True
-      Left = 706
+      Left = 703
       Top = 3
-      Width = 86
+      Width = 89
       Height = 24
       Align = alRight
       BevelOuter = bvNone
-      Color = 1557836
+      Color = 1557580
       ParentBackground = False
       TabOrder = 0
       object btnSalvar: TSpeedButton
         Left = 0
         Top = 0
-        Width = 86
+        Width = 89
         Height = 24
-        Cursor = crHandPoint
         Align = alClient
         Caption = 'SALVAR'
         Flat = True
@@ -1145,8 +1146,36 @@ inherited ViewBaseTelasModal: TViewBaseTelasModal
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
-        OnClick = btnFecharClick
-        ExplicitLeft = 32
+      end
+    end
+    object pnlBtnExcluir: TPanel
+      AlignWithMargins = True
+      Left = 609
+      Top = 3
+      Width = 89
+      Height = 24
+      Margins.Right = 2
+      Align = alRight
+      BevelOuter = bvNone
+      Color = clRed
+      ParentBackground = False
+      TabOrder = 1
+      ExplicitLeft = 512
+      object btnExcluir: TSpeedButton
+        Left = 0
+        Top = 0
+        Width = 89
+        Height = 24
+        Align = alClient
+        Caption = 'EXCLUIR'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -12
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+        ExplicitLeft = 64
         ExplicitTop = 8
         ExplicitWidth = 23
         ExplicitHeight = 22
@@ -1191,7 +1220,6 @@ inherited ViewBaseTelasModal: TViewBaseTelasModal
     TabOrder = 4
   end
   object dsDados: TDataSource
-    DataSet = ServiceEstoque.FDQueryProdutoCabecalho
     Left = 738
     Top = 43
   end

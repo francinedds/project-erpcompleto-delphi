@@ -1,0 +1,99 @@
+inherited ViewBaseTelasModal1: TViewBaseTelasModal1
+  Caption = 'ViewBaseTelasModal1'
+  TextHeight = 15
+  inherited pnlTopo: TPanel
+    inherited pnlTitulo: TPanel
+      inherited lblTitulo: TLabel
+        Width = 172
+        Height = 29
+        Caption = 'Vendas'
+        ExplicitWidth = 54
+      end
+    end
+  end
+  inherited pnlConteudo: TPanel
+    object pnlPesquisa: TPanel
+      Left = 0
+      Top = 0
+      Width = 791
+      Height = 65
+      Align = alTop
+      BevelOuter = bvNone
+      TabOrder = 0
+      object SearchBox: TSearchBox
+        Left = 6
+        Top = 6
+        Width = 491
+        Height = 21
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 0
+        Text = 'Pesquisar...'
+      end
+      object pnlBtnCancelar: TPanel
+        Left = 6
+        Top = 33
+        Width = 91
+        Height = 26
+        BevelOuter = bvNone
+        Color = 5263440
+        ParentBackground = False
+        TabOrder = 1
+        object btnCancelar: TSpeedButton
+          Left = 0
+          Top = 0
+          Width = 91
+          Height = 26
+          Align = alClient
+          Caption = 'Cancelar'
+          Flat = True
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWhite
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+          ExplicitTop = 8
+          ExplicitWidth = 23
+          ExplicitHeight = 22
+        end
+      end
+      object pnlBtnFaturar: TPanel
+        Left = 103
+        Top = 33
+        Width = 114
+        Height = 26
+        BevelOuter = bvNone
+        Color = 1557836
+        ParentBackground = False
+        TabOrder = 2
+        object btnFaturar: TSpeedButton
+          Left = 0
+          Top = 0
+          Width = 114
+          Height = 26
+          Align = alClient
+          Caption = 'Faturar Venda'
+          Flat = True
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWhite
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+          ExplicitLeft = 16
+          ExplicitTop = 8
+          ExplicitWidth = 23
+          ExplicitHeight = 22
+        end
+      end
+    end
+  end
+  inherited dsDados: TDataSource
+    Top = 107
+  end
+end

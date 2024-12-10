@@ -1,0 +1,25 @@
+unit view.modal.cadastro.cliente;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, view.base.telas.modal, Data.DB,
+  Vcl.StdCtrls, Vcl.Imaging.jpeg, Vcl.ExtCtrls, Vcl.Buttons;
+
+type
+  TViewBaseTelasModal1 = class(TViewBaseTelasModal)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ViewBaseTelasModal1: TViewBaseTelasModal1;
+
+implementation
+
+{$R *.dfm}
+
+end.

@@ -1,0 +1,57 @@
+unit service.pessoas;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, service.conexao, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf,
+  FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
+  FireDAC.Phys.FB, FireDAC.Phys.FBDef, FireDAC.VCLUI.Wait, FireDAC.Stan.Param,
+  FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet,
+  FireDAC.Comp.Client;
+
+type
+  TServicePessoas = class(TServiceConexao)
+    FDQueryClientes: TFDQuery;
+    FDQueryClientesID: TIntegerField;
+    FDQueryClientesRAZAO: TStringField;
+    FDQueryClientesFANTASIA: TStringField;
+    FDQueryClientesCNJPCPF: TStringField;
+    FDQueryClientesIERJ: TStringField;
+    FDQueryClientesOBSERVACAO: TStringField;
+    FDQueryClientesTIPOPESSOA: TIntegerField;
+    FDQueryEmpresa: TFDQuery;
+    FDQueryEmpresaID: TIntegerField;
+    FDQueryEmpresaRAZAO_SOCIAL: TStringField;
+    FDQueryEmpresaFANTASIA: TStringField;
+    FDQueryEmpresaCNPJ: TStringField;
+    FDQueryEmpresaIE: TStringField;
+    FDQueryEmpresaENDERECO: TStringField;
+    FDQueryEmpresaNUMERO: TStringField;
+    FDQueryEmpresaCIDADE: TStringField;
+    FDQueryEmpresaBAIRRO: TStringField;
+    FDQueryEmpresaUF: TStringField;
+    FDQueryEmpresaCEP: TStringField;
+    FDQueryEmpresaTELEFONE: TStringField;
+    FDQueryEmpresaIM: TStringField;
+    FDQueryEmpresaCRT: TIntegerField;
+    FDQueryEmpresaCOMPLEMENTO: TStringField;
+    FDQueryEmpresaID_PAIS: TIntegerField;
+    FDQueryEmpresaCODIGO_IBGE: TStringField;
+    FDQueryEmpresaLOGOMARCA: TBlobField;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ServicePessoas: TServicePessoas;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

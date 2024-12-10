@@ -1,0 +1,18 @@
+inherited ViewVendas: TViewVendas
+  Caption = 'ViewVendas'
+  TextHeight = 15
+  inherited pnlTopo: TPanel
+    inherited pnlTitulo: TPanel
+      inherited lblTitulo: TLabel
+        Caption = 'Estoque'
+        ExplicitWidth = 59
+      end
+    end
+    inherited pblTitulo2: TPanel
+      inherited lblTitulo2: TLabel
+        Caption = 'Vendas'
+        ExplicitWidth = 54
+      end
+    end
+  end
+end

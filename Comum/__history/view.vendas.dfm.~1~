@@ -1,0 +1,28 @@
+inherited ViewBaseListas1: TViewBaseListas1
+  Caption = 'ViewBaseListas1'
+  TextHeight = 15
+  inherited pnlTopo: TPanel
+    inherited pnlTitulo: TPanel
+      inherited lblTitulo: TLabel
+        Width = 100
+        Height = 35
+      end
+    end
+    inherited pblTitulo2: TPanel
+      inherited lblTitulo2: TLabel
+        Width = 331
+        Height = 35
+      end
+    end
+  end
+  inherited pnlConteudo: TPanel
+    inherited card_dados: TCardPanel
+      inherited card_vazio: TCard
+        inherited lblVazio: TLabel
+          Width = 1104
+          Height = 23
+        end
+      end
+    end
+  end
+end

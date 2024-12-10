@@ -1,0 +1,25 @@
+unit view.vendas;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, view.base.listas, Data.DB,
+  Vcl.WinXPanels, Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Buttons;
+
+type
+  TViewVendas = class(TViewBaseListas)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ViewVendas: TViewVendas;
+
+implementation
+
+{$R *.dfm}
+
+end.

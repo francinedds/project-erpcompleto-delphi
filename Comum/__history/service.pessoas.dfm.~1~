@@ -1,0 +1,53 @@
+inherited ServiceConexao1: TServiceConexao1
+  Height = 692
+  inherited FDConnection: TFDConnection
+    Connected = True
+  end
+  object FDQueryClientes: TFDQuery
+    Connection = FDConnection
+    SQL.Strings = (
+      'select * from pessoas where id = :id')
+    Left = 88
+    Top = 224
+    ParamData = <
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
+      end>
+    object FDQueryClientesID: TIntegerField
+      FieldName = 'ID'
+      Origin = 'ID'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object FDQueryClientesRAZAO: TStringField
+      FieldName = 'RAZAO'
+      Origin = 'RAZAO'
+      Size = 200
+    end
+    object FDQueryClientesFANTASIA: TStringField
+      FieldName = 'FANTASIA'
+      Origin = 'FANTASIA'
+      Size = 200
+    end
+    object FDQueryClientesCNJPCPF: TStringField
+      FieldName = 'CNJPCPF'
+      Origin = 'CNJPCPF'
+    end
+    object FDQueryClientesIERJ: TStringField
+      FieldName = 'IERJ'
+      Origin = 'IERJ'
+    end
+    object FDQueryClientesOBSERVACAO: TStringField
+      FieldName = 'OBSERVACAO'
+      Origin = 'OBSERVACAO'
+      Size = 200
+    end
+    object FDQueryClientesTIPOPESSOA: TIntegerField
+      FieldName = 'TIPOPESSOA'
+      Origin = 'TIPOPESSOA'
+    end
+  end
+end

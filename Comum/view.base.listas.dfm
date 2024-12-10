@@ -369,14 +369,116 @@ inherited ViewBaseListas: TViewBaseListas
         Height = 723
         Caption = 'Conteudo'
         CardIndex = 1
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
         TabOrder = 1
+        ExplicitLeft = -6
+        ExplicitTop = 2
+        object pnlPeriodo: TPanel
+          Left = 0
+          Top = 0
+          Width = 1110
+          Height = 81
+          Align = alTop
+          BevelOuter = bvNone
+          TabOrder = 0
+          object lblPerido: TLabel
+            Left = 111
+            Top = 31
+            Width = 7
+            Height = 13
+            Caption = 'a'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -12
+            Font.Name = 'Tahoma'
+            Font.Style = [fsBold]
+            ParentFont = False
+            Layout = tlBottom
+          end
+          object lblDe: TLabel
+            Left = 0
+            Top = 7
+            Width = 15
+            Height = 13
+            Caption = 'De'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object DateTimePicker1: TDateTimePicker
+            Left = 0
+            Top = 28
+            Width = 105
+            Height = 21
+            Date = 45631.000000000000000000
+            Time = 0.580195983799058000
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = [fsBold]
+            ParentFont = False
+            TabOrder = 0
+          end
+          object DateTimePicker2: TDateTimePicker
+            Left = 124
+            Top = 28
+            Width = 105
+            Height = 21
+            Date = 45631.000000000000000000
+            Time = 0.581140428243088500
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = [fsBold]
+            ParentFont = False
+            TabOrder = 1
+          end
+          object pnlBtnPesquisar: TPanel
+            Left = 242
+            Top = 28
+            Width = 73
+            Height = 21
+            BevelOuter = bvNone
+            Color = 5263440
+            ParentBackground = False
+            TabOrder = 2
+            object btnPesquisar: TSpeedButton
+              Left = 0
+              Top = 0
+              Width = 73
+              Height = 21
+              Cursor = crHandPoint
+              Align = alClient
+              Caption = 'Pesquisar'
+              Flat = True
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWhite
+              Font.Height = -9
+              Font.Name = 'Tahoma'
+              Font.Style = [fsBold]
+              ParentFont = False
+              ExplicitLeft = 32
+              ExplicitTop = 8
+              ExplicitWidth = 23
+              ExplicitHeight = 22
+            end
+          end
+        end
       end
     end
   end
-  object dsDadosLista: TDataSource
-    DataSet = ServiceEstoque.FDQueryProdutoCabecalho
-    OnDataChange = dsDadosListaDataChange
+  object dsDados: TDataSource
     Left = 1051
-    Top = 141
+    Top = 125
   end
 end

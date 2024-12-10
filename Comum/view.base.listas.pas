@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, view.base, Vcl.StdCtrls,
   Vcl.Imaging.jpeg, Vcl.ExtCtrls, Vcl.Buttons, Vcl.Imaging.pngimage,
-  Vcl.WinXPanels, Data.DB, service.estoque;
+  Vcl.WinXPanels, Data.DB, service.estoque, Vcl.ComCtrls;
 
 type
   TViewBaseListas = class(TViewBase)
@@ -37,8 +37,14 @@ type
     lblVazio: TLabel;
     lblTituloRegistro: TLabel;
     lblRegistros: TLabel;
-    dsDadosLista: TDataSource;
-    procedure dsDadosListaDataChange(Sender: TObject; Field: TField);
+    dsDados: TDataSource;
+    pnlPeriodo: TPanel;
+    DateTimePicker1: TDateTimePicker;
+    lblPerido: TLabel;
+    DateTimePicker2: TDateTimePicker;
+    pnlBtnPesquisar: TPanel;
+    btnPesquisar: TSpeedButton;
+    lblDe: TLabel;
   private
     { Private declarations }
   public
@@ -52,18 +58,5 @@ implementation
 
 {$R *.dfm}
 
-
-procedure TViewBaseListas.dsDadosListaDataChange(Sender: TObject; Field: TField);
-begin
-  Self.lblRegistros.Caption := TDataSource(Sender).DataSet.RecordCount.ToString;
-  if TDataSource(Sender).DataSet.RecordCount < 1 then
-  begin
-      Self.card_dados.ActiveCard := card_vazio;
-      Self.lblRegistros.Caption := '0';
-  end
-  else begin
-    Self.card_dados.ActiveCard := card_conteudo;
-  end;
-end;
 
 end.

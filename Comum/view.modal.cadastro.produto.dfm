@@ -1,7 +1,5 @@
 inherited ViewModalCadastroProduto: TViewModalCadastroProduto
   Caption = 'ViewModalCadastroProduto'
-  Position = poMainFormCenter
-  OnShow = FormShow
   TextHeight = 15
   inherited pnlTopo: TPanel
     inherited pnlUsuarios: TPanel
@@ -46,8 +44,6 @@ inherited ViewModalCadastroProduto: TViewModalCadastroProduto
       Left = 91
       ExplicitLeft = 91
       inherited lblTitulo: TLabel
-        Width = 172
-        Height = 29
         Caption = 'Cadastro de Produto'
         ExplicitWidth = 152
       end
@@ -55,57 +51,25 @@ inherited ViewModalCadastroProduto: TViewModalCadastroProduto
   end
   inherited pnlBottom: TPanel
     inherited pnlBtnSalvar: TPanel
-      Left = 672
-      Top = 0
-      Width = 121
-      Height = 30
-      Margins.Top = 0
+      Left = 704
       Margins.Right = 2
-      Margins.Bottom = 0
-      ExplicitLeft = 672
-      ExplicitTop = 0
-      ExplicitWidth = 121
-      ExplicitHeight = 30
+      ExplicitLeft = 704
       inherited btnSalvar: TSpeedButton
-        Width = 121
-        Height = 30
+        AlignWithMargins = True
+        Left = 3
+        Top = 3
+        Width = 83
+        Height = 18
+        OnClick = btnSalvarClick
         ExplicitWidth = 121
         ExplicitHeight = 30
       end
     end
-    object pnlCancelar: TPanel
-      AlignWithMargins = True
-      Left = 546
-      Top = 0
-      Width = 121
-      Height = 30
-      Margins.Top = 0
-      Margins.Right = 2
-      Margins.Bottom = 0
-      Align = alRight
-      BevelOuter = bvNone
-      Color = 4605510
-      ParentBackground = False
-      TabOrder = 1
-      ExplicitLeft = 672
-      object btnCancelar: TSpeedButton
-        Left = 0
-        Top = 0
-        Width = 121
-        Height = 30
-        Cursor = crHandPoint
-        Align = alClient
-        Caption = 'CANCELAR'
-        Flat = True
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWhite
-        Font.Height = -12
-        Font.Name = 'Tahoma'
-        Font.Style = [fsBold]
-        ParentFont = False
-        OnClick = btnFecharClick
-        ExplicitLeft = 32
-        ExplicitTop = 8
+    inherited pnlBtnExcluir: TPanel
+      Left = 610
+      ExplicitLeft = 578
+      inherited btnExcluir: TSpeedButton
+        OnClick = btnExcluirClick
       end
     end
   end
@@ -114,8 +78,6 @@ inherited ViewModalCadastroProduto: TViewModalCadastroProduto
     Margins.Right = 2
     Color = clWhite
     ParentBackground = False
-    ExplicitLeft = -3
-    ExplicitTop = 41
     object Label1: TLabel
       Left = 16
       Top = 32
@@ -371,6 +333,7 @@ inherited ViewModalCadastroProduto: TViewModalCadastroProduto
           Top = 0
           Width = 25
           Height = 22
+          Cursor = crHandPoint
           Align = alClient
           Caption = '+'
           Flat = True
@@ -398,6 +361,7 @@ inherited ViewModalCadastroProduto: TViewModalCadastroProduto
           Top = 0
           Width = 25
           Height = 22
+          Cursor = crHandPoint
           Align = alClient
           Caption = '+'
           Flat = True
@@ -424,6 +388,7 @@ inherited ViewModalCadastroProduto: TViewModalCadastroProduto
           Top = 0
           Width = 25
           Height = 22
+          Cursor = crHandPoint
           Align = alClient
           Caption = '+'
           Flat = True
@@ -485,6 +450,9 @@ inherited ViewModalCadastroProduto: TViewModalCadastroProduto
       Width = 121
       Height = 21
       TabOrder = 8
+      Items.Strings = (
+        'ATIVO'
+        'INATIVO')
     end
     object DBEdit15: TDBEdit
       Left = 303
