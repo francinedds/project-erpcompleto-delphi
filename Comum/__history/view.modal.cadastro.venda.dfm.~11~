@@ -1,16 +1,14 @@
 inherited ViewModalCadastroVenda: TViewModalCadastroVenda
   Caption = 'ViewModalCadastroVenda'
-  ClientHeight = 721
-  ClientWidth = 958
-  ExplicitWidth = 958
-  ExplicitHeight = 721
+  ClientHeight = 671
+  ClientWidth = 905
+  ExplicitWidth = 905
+  ExplicitHeight = 671
   TextHeight = 15
   inherited pnlTopo: TPanel
-    Width = 958
-    ExplicitWidth = 958
+    Width = 905
     inherited pnlUsuarios: TPanel
-      Left = 701
-      ExplicitLeft = 701
+      Left = 648
     end
     inherited pnlTitulo: TPanel
       inherited lblTitulo: TLabel
@@ -22,50 +20,44 @@ inherited ViewModalCadastroVenda: TViewModalCadastroVenda
     end
   end
   inherited pnlBottom: TPanel
-    Top = 691
-    Width = 958
-    ExplicitTop = 691
-    ExplicitWidth = 958
+    Top = 641
+    Width = 905
     inherited pnlBtnSalvar: TPanel
-      Left = 866
-      ExplicitLeft = 866
+      Left = 813
       inherited btnSalvar: TSpeedButton
         Cursor = crHandPoint
       end
     end
     inherited pnlBtnExcluir: TPanel
-      Left = 772
-      ExplicitLeft = 772
+      Left = 719
+      ExplicitLeft = 609
       inherited btnExcluir: TSpeedButton
         Cursor = crHandPoint
       end
     end
   end
   inherited pnlLinhaLeft: TPanel
-    Height = 656
-    ExplicitHeight = 656
+    Height = 606
   end
   inherited pnlLinhaRight: TPanel
-    Left = 956
-    Height = 656
-    ExplicitLeft = 956
-    ExplicitHeight = 656
+    Left = 903
+    Height = 606
   end
   inherited pnlConteudo: TPanel
-    Width = 954
-    Height = 656
-    ExplicitWidth = 954
-    ExplicitHeight = 656
+    Width = 901
+    Height = 606
     object pnlPesquisa: TPanel
       Left = 0
       Top = 0
-      Width = 954
+      Width = 901
       Height = 81
       Align = alTop
       BevelOuter = bvNone
       Color = 15724527
       ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = -172
+      ExplicitTop = -16
       object lblVendedor: TLabel
         Left = 6
         Top = 19
@@ -97,7 +89,7 @@ inherited ViewModalCadastroVenda: TViewModalCadastroVenda
       object PesquisaVendedor: TSearchBox
         Left = 99
         Top = 18
-        Width = 310
+        Width = 250
         Height = 21
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -108,8 +100,8 @@ inherited ViewModalCadastroVenda: TViewModalCadastroVenda
         TabOrder = 0
       end
       object pnlBtnCancelar: TPanel
-        Left = 704
-        Top = 6
+        Left = 781
+        Top = 45
         Width = 114
         Height = 26
         BevelOuter = bvNone
@@ -136,8 +128,8 @@ inherited ViewModalCadastroVenda: TViewModalCadastroVenda
         end
       end
       object pnlBtnFaturar: TPanel
-        Left = 824
-        Top = 6
+        Left = 781
+        Top = 16
         Width = 114
         Height = 26
         BevelOuter = bvNone
@@ -159,13 +151,15 @@ inherited ViewModalCadastroVenda: TViewModalCadastroVenda
           Font.Name = 'Tahoma'
           Font.Style = [fsBold]
           ParentFont = False
-          ExplicitLeft = 53
+          ExplicitLeft = 24
+          ExplicitTop = -3
+          ExplicitWidth = 96
         end
       end
       object PesquisaCliente: TSearchBox
         Left = 99
         Top = 45
-        Width = 310
+        Width = 250
         Height = 21
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -175,42 +169,16 @@ inherited ViewModalCadastroVenda: TViewModalCadastroVenda
         ParentFont = False
         TabOrder = 3
       end
-      object pnlBtnNovaVenda: TPanel
-        Left = 584
-        Top = 6
-        Width = 114
-        Height = 26
-        BevelOuter = bvNone
-        Color = 13602864
-        ParentBackground = False
-        TabOrder = 4
-        object btnNovaVenda: TSpeedButton
-          Left = 0
-          Top = 0
-          Width = 114
-          Height = 26
-          Cursor = crHandPoint
-          Align = alClient
-          Caption = 'Nova Venda [F2]'
-          Flat = True
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWhite
-          Font.Height = -11
-          Font.Name = 'Tahoma'
-          Font.Style = [fsBold]
-          ParentFont = False
-          ExplicitLeft = 16
-        end
-      end
     end
     object pnlDadosProduto: TPanel
       Left = 0
       Top = 81
-      Width = 954
-      Height = 112
+      Width = 901
+      Height = 137
       Align = alTop
       BevelOuter = bvNone
       TabOrder = 1
+      ExplicitTop = 56
       object lblProduto: TLabel
         Left = 6
         Top = 56
@@ -225,7 +193,7 @@ inherited ViewModalCadastroVenda: TViewModalCadastroVenda
         ParentFont = False
       end
       object lblPrecoUnit: TLabel
-        Left = 496
+        Left = 440
         Top = 56
         Width = 83
         Height = 14
@@ -238,7 +206,7 @@ inherited ViewModalCadastroVenda: TViewModalCadastroVenda
         ParentFont = False
       end
       object lblPercDesconto: TLabel
-        Left = 585
+        Left = 529
         Top = 56
         Width = 76
         Height = 14
@@ -251,7 +219,7 @@ inherited ViewModalCadastroVenda: TViewModalCadastroVenda
         ParentFont = False
       end
       object lblPrecoFinal: TLabel
-        Left = 675
+        Left = 619
         Top = 56
         Width = 86
         Height = 14
@@ -264,7 +232,7 @@ inherited ViewModalCadastroVenda: TViewModalCadastroVenda
         ParentFont = False
       end
       object lblQuantProduto: TLabel
-        Left = 767
+        Left = 711
         Top = 55
         Width = 74
         Height = 14
@@ -292,40 +260,40 @@ inherited ViewModalCadastroVenda: TViewModalCadastroVenda
       object edtProduto: TEdit
         Left = 6
         Top = 76
-        Width = 483
+        Width = 427
         Height = 21
         TabOrder = 0
       end
       object edtValorUnit: TEdit
-        Left = 495
+        Left = 439
         Top = 76
         Width = 84
         Height = 21
         TabOrder = 1
       end
       object edtPrecoFinal: TEdit
-        Left = 675
+        Left = 619
         Top = 76
         Width = 84
         Height = 21
         TabOrder = 2
       end
       object edtQuantProduto: TEdit
-        Left = 765
+        Left = 709
         Top = 75
         Width = 84
         Height = 21
         TabOrder = 3
       end
       object edtPercDesconto: TEdit
-        Left = 585
+        Left = 529
         Top = 76
         Width = 84
         Height = 21
         TabOrder = 4
       end
       object pnlBtnAdicionar: TPanel
-        Left = 855
+        Left = 799
         Top = 56
         Width = 91
         Height = 41
@@ -340,7 +308,7 @@ inherited ViewModalCadastroVenda: TViewModalCadastroVenda
           Height = 41
           Cursor = crHandPoint
           Align = alClient
-          Caption = '+ Adicionar'
+          Caption = 'Adicionar'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWhite
@@ -357,7 +325,7 @@ inherited ViewModalCadastroVenda: TViewModalCadastroVenda
       object pesquisaProduto: TSearchBox
         Left = 6
         Top = 26
-        Width = 942
+        Width = 113
         Height = 21
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -370,37 +338,39 @@ inherited ViewModalCadastroVenda: TViewModalCadastroVenda
     end
     object pnlSubtotalVenda: TPanel
       Left = 0
-      Top = 591
-      Width = 954
+      Top = 541
+      Width = 901
       Height = 65
       Align = alBottom
       BevelOuter = bvNone
       Color = 15724527
       ParentBackground = False
       TabOrder = 2
+      ExplicitTop = 440
+      ExplicitWidth = 791
       object lblTotBrutoVenda: TLabel
-        Left = 529
+        Left = 481
         Top = 11
         Width = 118
         Height = 13
         Caption = 'Total Bruto da Venda'
       end
       object lblTotalDesconto: TLabel
-        Left = 675
+        Left = 627
         Top = 11
         Width = 102
         Height = 13
         Caption = 'Total do Desconto'
       end
       object lblTotalVenda: TLabel
-        Left = 817
+        Left = 769
         Top = 11
         Width = 84
         Height = 13
         Caption = 'Total da Venda'
       end
       object edtTotBrutoVenda: TEdit
-        Left = 529
+        Left = 481
         Top = 30
         Width = 121
         Height = 21
@@ -409,7 +379,7 @@ inherited ViewModalCadastroVenda: TViewModalCadastroVenda
         Text = '0,00'
       end
       object edtTotalDesconto: TEdit
-        Left = 675
+        Left = 627
         Top = 30
         Width = 121
         Height = 21
@@ -418,7 +388,7 @@ inherited ViewModalCadastroVenda: TViewModalCadastroVenda
         Text = '0,00'
       end
       object edtTotalVenda: TEdit
-        Left = 817
+        Left = 769
         Top = 30
         Width = 121
         Height = 21
@@ -429,9 +399,9 @@ inherited ViewModalCadastroVenda: TViewModalCadastroVenda
     end
     object DBGrid1: TDBGrid
       Left = 0
-      Top = 193
-      Width = 954
-      Height = 398
+      Top = 218
+      Width = 901
+      Height = 323
       Align = alClient
       BorderStyle = bsNone
       DataSource = dsDados
@@ -488,7 +458,7 @@ inherited ViewModalCadastroVenda: TViewModalCadastroVenda
   end
   inherited dsDados: TDataSource
     DataSet = ServiceEstoque.FDQueryProdutoPesquisa
-    Left = 466
+    Left = 650
     Top = 11
   end
 end

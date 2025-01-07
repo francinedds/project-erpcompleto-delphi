@@ -42,8 +42,6 @@ type
     lblVendedor: TLabel;
     lblCliente: TLabel;
     PesquisaCliente: TSearchBox;
-    pnlBtnNovaVenda: TPanel;
-    btnNovaVenda: TSpeedButton;
   private
     { Private declarations }
   public

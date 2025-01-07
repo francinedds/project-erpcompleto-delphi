@@ -7,10 +7,8 @@ inherited ViewModalCadastroVenda: TViewModalCadastroVenda
   TextHeight = 15
   inherited pnlTopo: TPanel
     Width = 958
-    ExplicitWidth = 958
     inherited pnlUsuarios: TPanel
       Left = 701
-      ExplicitLeft = 701
     end
     inherited pnlTitulo: TPanel
       inherited lblTitulo: TLabel
@@ -24,18 +22,15 @@ inherited ViewModalCadastroVenda: TViewModalCadastroVenda
   inherited pnlBottom: TPanel
     Top = 691
     Width = 958
-    ExplicitTop = 691
-    ExplicitWidth = 958
     inherited pnlBtnSalvar: TPanel
       Left = 866
-      ExplicitLeft = 866
       inherited btnSalvar: TSpeedButton
         Cursor = crHandPoint
       end
     end
     inherited pnlBtnExcluir: TPanel
       Left = 772
-      ExplicitLeft = 772
+      ExplicitLeft = 609
       inherited btnExcluir: TSpeedButton
         Cursor = crHandPoint
       end
@@ -43,19 +38,14 @@ inherited ViewModalCadastroVenda: TViewModalCadastroVenda
   end
   inherited pnlLinhaLeft: TPanel
     Height = 656
-    ExplicitHeight = 656
   end
   inherited pnlLinhaRight: TPanel
     Left = 956
     Height = 656
-    ExplicitLeft = 956
-    ExplicitHeight = 656
   end
   inherited pnlConteudo: TPanel
     Width = 954
     Height = 656
-    ExplicitWidth = 954
-    ExplicitHeight = 656
     object pnlPesquisa: TPanel
       Left = 0
       Top = 0
@@ -66,6 +56,9 @@ inherited ViewModalCadastroVenda: TViewModalCadastroVenda
       Color = 15724527
       ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = -172
+      ExplicitTop = -16
+      ExplicitWidth = 901
       object lblVendedor: TLabel
         Left = 6
         Top = 19
@@ -211,6 +204,7 @@ inherited ViewModalCadastroVenda: TViewModalCadastroVenda
       Align = alTop
       BevelOuter = bvNone
       TabOrder = 1
+      ExplicitWidth = 901
       object lblProduto: TLabel
         Left = 6
         Top = 56
@@ -340,7 +334,7 @@ inherited ViewModalCadastroVenda: TViewModalCadastroVenda
           Height = 41
           Cursor = crHandPoint
           Align = alClient
-          Caption = '+ Adicionar'
+          Caption = 'Adicionar'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWhite
@@ -357,7 +351,7 @@ inherited ViewModalCadastroVenda: TViewModalCadastroVenda
       object pesquisaProduto: TSearchBox
         Left = 6
         Top = 26
-        Width = 942
+        Width = 113
         Height = 21
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -378,6 +372,8 @@ inherited ViewModalCadastroVenda: TViewModalCadastroVenda
       Color = 15724527
       ParentBackground = False
       TabOrder = 2
+      ExplicitTop = 440
+      ExplicitWidth = 791
       object lblTotBrutoVenda: TLabel
         Left = 529
         Top = 11

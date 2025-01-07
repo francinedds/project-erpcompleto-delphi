@@ -4,7 +4,8 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, service.estoque;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, service.estoque, service.pessoas,
+  service.vendas;
 
 type
   TViewBase = class(TForm)
@@ -13,10 +14,18 @@ type
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
   private
-    { Private declarations }
+    ServiceEstoque: TServiceEstoque;
+    ServicePessoas: TServicePessoas;
+    ServiceVendas: TServiceVendas;
+
+    function GetServiceEstoque: TServiceEstoque;
+    function GetServicePessoas: TServicePessoas;
+    function GetServiceVendas: TServiceVendas;
 
   published
-  //FServiceEstoque: TServiceEstoque;
+    property FServiceEstoque : TServiceEstoque read GetServiceEstoque;
+    property FServicePessoas : TServicePessoas read GetServicePessoas;
+    property FServiceVendas  : TServiceVendas  read GetServiceVendas;
 
   public
     { Public declarations }
@@ -55,6 +64,27 @@ begin //pular edit pressionando enter
     begin
       Perform(WM_NEXTDLGCTL,0,0);
     end;
+end;
+
+function TViewBase.GetServiceEstoque: TServiceEstoque;
+begin
+   if ServiceEstoque = nil then
+      ServiceEstoque := TServiceEstoque.Create(nil);
+      Result := ServiceEstoque;
+end;
+
+function TViewBase.GetServicePessoas: TServicePessoas;
+begin
+  if ServicePessoas = nil then
+     ServicePessoas := TServicePessoas.Create(nil);
+     Result := ServicePessoas;
+end;
+
+function TViewBase.GetServiceVendas: TServiceVendas;
+begin
+  if ServiceVendas = nil then
+     ServiceVendas := TServiceVendas.Create(nil);
+     Result := ServiceVendas;
 end;
 
 end.

@@ -10,7 +10,7 @@ uses
 
 type
   TViewVendas = class(TViewBaseListas)
-    pnlGridVenda: TPanel;
+    pnlGridSemNome: TPanel;
     pnlUtils: TPanel;
     pnlImprimir: TPanel;
     btnImprimir: TSpeedButton;

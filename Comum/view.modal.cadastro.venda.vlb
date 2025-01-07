@@ -55,9 +55,6 @@ Coordinates=252,214,90,58
 [pnlPesquisa]
 Coordinates=311,10,85,58
 
-[SearchBox]
-Coordinates=106,10,77,58
-
 [btnCancelar]
 Coordinates=176,282,84,36
 
@@ -91,4 +88,7 @@ Coordinates=10,10,86,58
 []
 Coordinates=274,78,44,58
 Visible=True
+
+[PesquisaVendedor]
+Coordinates=106,10,77,58
 

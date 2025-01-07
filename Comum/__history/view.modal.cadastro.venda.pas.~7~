@@ -11,7 +11,7 @@ uses
 type
   TViewModalCadastroVenda = class(TViewBaseTelasModal)
     pnlPesquisa: TPanel;
-    PesquisaVendedor: TSearchBox;
+    SearchBox: TSearchBox;
     pnlBtnCancelar: TPanel;
     btnCancelar: TSpeedButton;
     pnlBtnFaturar: TPanel;
@@ -37,13 +37,6 @@ type
     lblTotalVenda: TLabel;
     edtTotalVenda: TEdit;
     DBGrid1: TDBGrid;
-    pesquisaProduto: TSearchBox;
-    lblPesquisarProduto: TLabel;
-    lblVendedor: TLabel;
-    lblCliente: TLabel;
-    PesquisaCliente: TSearchBox;
-    pnlBtnNovaVenda: TPanel;
-    btnNovaVenda: TSpeedButton;
   private
     { Private declarations }
   public

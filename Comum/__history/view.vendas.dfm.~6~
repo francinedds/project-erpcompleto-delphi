@@ -63,7 +63,7 @@ inherited ViewVendas: TViewVendas
             ExplicitWidth = 1101
           end
         end
-        object pnlGridVenda: TPanel
+        object pnlGridSemNome: TPanel
           Left = 0
           Top = 97
           Width = 1110
