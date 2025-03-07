@@ -4,6 +4,5 @@
 - Em andamento
 -  @delphigov
 
-![Texto alternativo](https://github.com/francinedds/project-erpcompleto-delphi/blob/main/src/mockup-sistema-erp.png)
 
  
